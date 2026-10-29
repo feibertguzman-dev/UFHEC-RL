@@ -1,0 +1,340 @@
+{
+  "source": "C:\\Users\\Feibert\\OneDrive\\Documents\\UFHEC\\UFHEC_ML\\Project_RL\\Project_RL.ipynb",
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.10.0"
+    },
+    "colab": {
+      "provenance": []
+    }
+  },
+  "cell_count": 19,
+  "markdown_cells": 11,
+  "code_cells": 8,
+  "headings": [
+    {
+      "index": 0,
+      "level": 1,
+      "title": "🏡 Tutorial de Machine Learning: Predicción de Precios de Viviendas con Regresión Lineal"
+    },
+    {
+      "index": 0,
+      "level": 2,
+      "title": "🎯 1. Planteamiento del Problema"
+    },
+    {
+      "index": 0,
+      "level": 3,
+      "title": "El Problema"
+    },
+    {
+      "index": 0,
+      "level": 3,
+      "title": "Pregunta Problema"
+    },
+    {
+      "index": 0,
+      "level": 3,
+      "title": "Objetivo"
+    },
+    {
+      "index": 0,
+      "level": 3,
+      "title": "Propósito"
+    },
+    {
+      "index": 1,
+      "level": 2,
+      "title": "🧠 2. Marco Teórico: ¿Qué es la Regresión Lineal?"
+    },
+    {
+      "index": 1,
+      "level": 3,
+      "title": "Tipos de Regresión Lineal que veremos:"
+    },
+    {
+      "index": 1,
+      "level": 3,
+      "title": "Métricas de Evaluación"
+    },
+    {
+      "index": 2,
+      "level": 2,
+      "title": "📊 3. Diccionario de Variables"
+    },
+    {
+      "index": 3,
+      "level": 2,
+      "title": "💻 4. Importar Librerías"
+    },
+    {
+      "index": 5,
+      "level": 2,
+      "title": "📂 5. Cargar y Explorar los Datos"
+    },
+    {
+      "index": 7,
+      "level": 2,
+      "title": "🧹 6. Preprocesamiento y Análisis de Correlación"
+    },
+    {
+      "index": 10,
+      "level": 2,
+      "title": "📈 7. Regresión Lineal Simple"
+    },
+    {
+      "index": 12,
+      "level": 2,
+      "title": "🚀 8. Regresión Lineal Múltiple"
+    },
+    {
+      "index": 14,
+      "level": 2,
+      "title": "📊 9. Evaluar el Modelo"
+    },
+    {
+      "index": 16,
+      "level": 2,
+      "title": "🎮 10. Simulador de Predicción"
+    },
+    {
+      "index": 18,
+      "level": 2,
+      "title": "💡 Conclusiones y Recomendaciones"
+    },
+    {
+      "index": 18,
+      "level": 3,
+      "title": "¿Qué aprendimos?"
+    },
+    {
+      "index": 18,
+      "level": 3,
+      "title": "🔍 Ideas para mejorar el modelo:"
+    },
+    {
+      "index": 18,
+      "level": 3,
+      "title": "🎯 Experimenta con el simulador:"
+    }
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "seaborn",
+    "sklearn"
+  ],
+  "read_paths": [
+    "housing.csv"
+  ],
+  "figures": 3,
+  "cells": [
+    {
+      "index": 0,
+      "type": "markdown",
+      "source": "# 🏡 Tutorial de Machine Learning: Predicción de Precios de Viviendas con Regresión Lineal\n\nEn este tutorial aprenderemos a utilizar algoritmos de **Machine Learning** para predecir el precio de las viviendas. Utilizaremos un conjunto de datos que contiene información demográfica y física de diferentes áreas, y aplicaremos dos técnicas fundamentales: **Regresión Lineal Simple** y **Regresión Lineal Múltiple**.\n\n---\n\n## 🎯 1. Planteamiento del Problema\n\n### El Problema\nEl mercado inmobiliario es altamente dinámico y complejo. El precio de una vivienda no es un valor aleatorio, sino que está influenciado por múltiples factores: el tamaño de la propiedad, la cantidad de habitaciones, la antigüedad, y factores externos como el ingreso promedio de los vecinos o la densidad poblacional del área. Para compradores, vendedores e inversores, estimar con precisión el valor de una propiedad basándose en datos históricos es un desafío constante.\n\n### Pregunta Problema\n¿Cómo podemos predecir el precio de venta de una vivienda utilizando características demográficas y físicas del área donde se encuentra, mediante modelos de Machine Learning?\n\n### Objetivo\nDesarrollar modelos de Regresión Lineal (Simple y Múltiple) que permitan estimar el precio de una vivienda (`Price`) en función de variables predictoras como el ingreso promedio del área, la edad de las casas, el número de habitaciones y la población.\n\n### Propósito\nCrear una herramienta predictiva accesible y comprensible que demuestre, paso a paso, cómo aplicar algoritmos de Machine Learning en Python para tomar decisiones informadas y basadas en datos en el sector inmobiliario.",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 1,
+      "type": "markdown",
+      "source": "## 🧠 2. Marco Teórico: ¿Qué es la Regresión Lineal?\n\nLa **Regresión Lineal** es un algoritmo de **Machine Learning Supervisado** que se utiliza para predecir un valor continuo (como el precio de una casa, la temperatura o las ventas). Su objetivo es encontrar la \"línea recta\" (o hiperplano, en múltiples dimensiones) que mejor se ajuste a la relación entre nuestras variables.\n\n### Tipos de Regresión Lineal que veremos:\n1. **Regresión Lineal Simple**: Utiliza **una sola variable** independiente para predecir la variable dependiente.\n   - *Ecuación:* $y = \\beta_0 + \\beta_1x$\n   - *Ejemplo:* Predecir el precio de una casa basándonos **únicamente** en la población del área.\n   \n2. **Regresión Lineal Múltiple**: Utiliza **dos o más variables** independientes para predecir la variable dependiente.\n   - *Ecuación:* $y = \\beta_0 + \\beta_1x_1 + \\beta_2x_2 + ... + \\beta_nx_n$\n   - *Ejemplo:* Predecir el precio usando el ingreso, la edad de la casa, habitaciones y población al mismo tiempo.\n\n### Métricas de Evaluación\nPara saber qué tan bueno es nuestro modelo, usaremos:\n- **MSE (Mean Squared Error)**: Mide el promedio de los errores al cuadrado. Entre más cerca a 0, mejor.\n- **R² (R-cuadrado)**: Nos dice qué porcentaje de la variabilidad de los datos es explicada por nuestro modelo (un valor de 0.91 significa que el modelo explica el 91% de los datos).",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 2,
+      "type": "markdown",
+      "source": "## 📊 3. Diccionario de Variables\n\nA continuación, se detallan las variables de nuestro dataset, su tipo de dato y cómo las utilizaremos en nuestro modelo de Machine Learning.\n\n| Variable | Tipo de Dato | Descripción | Uso en Machine Learning (Regresión) |\n| :--- | :--- | :--- | :--- |\n| **`Avg. Area Income`** | Numérica (Continua) | Ingreso promedio de los habitantes del área. | **Feature (Variable Independiente)**. A mayor ingreso en el área, se espera que los precios de las viviendas sean más altos. |\n| **`Avg. Area House Age`** | Numérica (Continua) | Edad promedio de las casas en el área. | **Feature (Variable Independiente)**. Nos ayuda a entender si las casas más nuevas (o más antiguas) tienen mayor valor en la zona. |\n| **`Avg. Area Number of Rooms`** | Numérica (Continua) | Promedio de habitaciones totales por casa en el área. | **Feature (Variable Independiente)**. Más habitaciones suele correlacionarse con casas más grandes y costosas. |\n| **`Avg. Area Number of Bedrooms`** | Numérica (Continua) | Promedio de dormitorios por casa en el área. | **Feature (Variable Independiente)**. Similar a la anterior, pero enfocada en dormitorios, un factor clave para familias. |\n| **`Area Population`** | Numérica (Continua) | Población promedio del área. | **Feature (Variable Independiente)**. La usaremos tanto en la regresión simple como en la múltiple para ver su impacto individual y grupal. |\n| **`Price`** | Numérica (Continua) | Precio de venta de la vivienda. | **Target (Variable Dependiente)**. Es la variable que nuestro modelo intentará aprender a predecir. |\n| **`Address`** | Texto (String) | Dirección física de la propiedad. | **Se elimina**. Las direcciones son texto único y no aportan un patrón matemático útil para la regresión lineal. |",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 3,
+      "type": "markdown",
+      "source": "---\n## 💻 4. Importar Librerías\n\nComenzamos importando todas las herramientas necesarias para manipular datos, visualizar gráficos y construir nuestro modelo de Machine Learning.",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 4,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 1: IMPORTAR LIBRERÍAS\n# ==============================================================================\n# Importamos las herramientas necesarias para manipular datos, hacer gráficos\n# y crear nuestro modelo de Machine Learning.\n\nimport pandas as pd             # Para cargar y manipular los datos (DataFrames)\nimport numpy as np              # Para operaciones matemáticas y matrices\nimport matplotlib.pyplot as plt # Para crear gráficos básicos\nimport seaborn as sb            # Para gráficos estadísticos más atractivos (como mapas de calor)\n\n# Librerías de Machine Learning (Scikit-Learn)\nfrom sklearn.linear_model import LinearRegression       # El algoritmo de Regresión Lineal\nfrom sklearn.metrics import mean_squared_error, r2_score # Para evaluar qué tan bueno es el modelo\nfrom sklearn.model_selection import train_test_split    # Para dividir los datos en entrenamiento y prueba",
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "index": 5,
+      "type": "markdown",
+      "source": "---\n## 📂 5. Cargar y Explorar los Datos\n\nCargamos el archivo `housing.csv` en un DataFrame de pandas y realizamos una exploración inicial para entender la estructura de los datos.",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 6,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 2: CARGAR Y EXPLORAR LOS DATOS\n# ==============================================================================\n# Cargamos el archivo CSV en un DataFrame de pandas llamado 'df'\ndf = pd.read_csv('housing.csv')\n\n# Mostramos las primeras 5 filas para ver cómo se ven los datos\nprint(\"--- Primeras 5 filas del dataset ---\")\ndisplay(df.head())\n\n# Mostramos información general: tipos de datos y si hay valores nulos\nprint(\"\\n--- Información general del dataset ---\")\ndf.info()\n\n# Estadísticas descriptivas (media, desviación estándar, mínimos, máximos)\nprint(\"\\n--- Estadísticas descriptivas ---\")\ndf.describe()",
+      "execution_count": 4,
+      "outputs": [
+        {
+          "type": "stream",
+          "text": "--- Primeras 5 filas del dataset ---\n",
+          "figure": null
+        },
+        {
+          "type": "display_data",
+          "text": "   longitude  latitude  housing_median_age  total_rooms  total_bedrooms  \\\n0    -122.23     37.88                41.0        880.0           129.0   \n1    -122.22     37.86                21.0       7099.0          1106.0   \n2    -122.24     37.85                52.0       1467.0           190.0   \n3    -122.25     37.85                52.0       1274.0           235.0   \n4    -122.25     37.85                52.0       1627.0           280.0   \n\n   population  households  median_income  median_house_value ocean_proximity  \n0       322.0       126.0         8.3252            452600.0        NEAR BAY  \n1      2401.0      1138.0         8.3014            358500.0        NEAR BAY  \n2       496.0       177.0         7.2574            352100.0        NEAR BAY  \n3       558.0       219.0         5.6431            341300.0        NEAR BAY  \n4       565.0       259.0         3.8462            342200.0        NEAR BAY  ",
+          "figure": null
+        },
+        {
+          "type": "stream",
+          "text": "\n--- Información general del dataset ---\n<class 'pandas.core.frame.DataFrame'>\nRangeIndex: 20640 entries, 0 to 20639\nData columns (total 10 columns):\n #   Column              Non-Null Count  Dtype  \n---  ------              --------------  -----  \n 0   longitude           20640 non-null  float64\n 1   latitude            20640 non-null  float64\n 2   housing_median_age  20640 non-null  float64\n 3   total_rooms         20640 non-null  float64\n 4   total_bedrooms      20433 non-null  float64\n 5   population          20640 non-null  float64\n 6   households          20640 non-null  float64\n 7   median_income       20640 non-null  float64\n 8   median_house_value  20640 non-null  float64\n 9   ocean_proximity     20640 non-null  object \ndtypes: float64(9), object(1)\nmemory usage: 1.6+ MB\n\n--- Estadísticas descriptivas ---\n",
+          "figure": null
+        },
+        {
+          "type": "execute_result",
+          "text": "          longitude      latitude  housing_median_age   total_rooms  \\\ncount  20640.000000  20640.000000        20640.000000  20640.000000   \nmean    -119.569704     35.631861           28.639486   2635.763081   \nstd        2.003532      2.135952           12.585558   2181.615252   \nmin     -124.350000     32.540000            1.000000      2.000000   \n25%     -121.800000     33.930000           18.000000   1447.750000   \n50%     -118.490000     34.260000           29.000000   2127.000000   \n75%     -118.010000     37.710000           37.000000   3148.000000   \nmax     -114.310000     41.950000           52.000000  39320.000000   \n\n       total_bedrooms    population    households  median_income  \\\ncount    20433.000000  20640.000000  20640.000000   20640.000000   \nmean       537.870553   1425.476744    499.539680       3.870671   \nstd        421.385070   1132.462122    382.329753       1.899822   \nmin          1.000000      3.000000      1.000000       0.499900   \n25%        296.000000    787.000000    280.000000       2.563400   \n50%        435.000000   1166.000000    409.000000       3.534800   \n75%        647.000000   1725.000000    605.000000       4.743250   \nmax       6445.000000  35682.000000   6082.000000      15.000100   \n\n       median_house_value  \ncount        20640.000000  \nmean        206855.816909  \nstd         115395.615874  \nmin          14999.000000  \n25%         119600.000000  \n50%         179700.000000  \n75%         264725.000000  \nmax         500001.000000  ",
+          "figure": null
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "type": "markdown",
+      "source": "---\n## 🧹 6. Preprocesamiento y Análisis de Correlación\n\nAntes de entrenar el modelo, debemos:\n1. **Eliminar la columna `Address`** porque es texto y no aporta información matemática útil.\n2. **Calcular la matriz de correlación** para ver qué variables están más relacionadas con el precio.",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 8,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 3: PREPROCESAMIENTO Y ANÁLISIS DE CORRELACIÓN\n# ==============================================================================\n# 1. Eliminamos la columna 'ocean_proximity' porque es texto y no sirve para la regresión.\n# (El dataset real de California contiene 'ocean_proximity' en lugar de 'Address')\ndf_numeric = df.drop('ocean_proximity', axis=1, errors='ignore')\n\n# 2. Calculamos la matriz de correlación.\n# Esto nos dice qué tan fuertemente relacionadas están las variables entre sí.\ncorr = df_numeric.corr()\n\n# 3. Creamos un mapa de calor (Heatmap) para visualizar la correlación.\nplt.figure(figsize=(10, 6))\nsb.heatmap(corr, annot=True, cmap='viridis', fmt=\".2f\")\nplt.title(\"Matriz de Correlación de las Variables\")\nplt.show()\n\n# NOTA: En este dataset, 'median_income' tiene una correlación muy fuerte con 'median_house_value',\n# por lo que es una excelente candidata para la Regresión Lineal Simple.",
+      "execution_count": 5,
+      "outputs": [
+        {
+          "type": "display_data",
+          "text": "<Figure size 1000x600 with 2 Axes>",
+          "figure": "work\\figures\\notebook-00.png"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "type": "code",
+      "source": "import seaborn as sb\nimport matplotlib.pyplot as plt\n\n# Corregimos 'datos' por 'df_clean', que es el DataFrame cargado y limpio en el notebook\nplt.figure(figsize=(10, 8))\nsb.scatterplot(x=\"longitude\", y=\"latitude\", data=df_clean, hue=\"median_house_value\", palette=\"coolwarm\",\n               size=\"population\", sizes=(10, 200), alpha=0.5)\n\nplt.title(\"Distribución Geográfica de Precios y Población en California\")\nplt.xlabel(\"Longitud\")\nplt.ylabel(\"Latitud\")\nplt.show()",
+      "execution_count": 17,
+      "outputs": [
+        {
+          "type": "display_data",
+          "text": "<Figure size 1000x800 with 1 Axes>",
+          "figure": "work\\figures\\notebook-01.png"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "type": "markdown",
+      "source": "---\n## 📈 7. Regresión Lineal Simple\n\nEn esta sección, vamos a predecir el precio de la vivienda (`Price`) utilizando **una sola variable**: la Población del Área (`Area Population`).\n\nEl modelo aprenderá la ecuación de la línea recta que mejor relacione la población con el precio.",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 11,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 4: REGRESIÓN LINEAL SIMPLE\n# ==============================================================================\n# Definimos nuestra variable independiente (X) y la dependiente (y)\n# Usaremos 'median_income' por su fuerte correlación con 'median_house_value'\nx = df[['median_income']] # Usamos doble corchete [[' ']] para que sea un DataFrame\ny = df['median_house_value'] # Variable a predecir (Target)\n\n# Creamos la instancia del modelo\nmodel_simple = LinearRegression()\n\n# Entrenamos el modelo con los datos (fit)\nmodel_simple.fit(x, y)\n\n# Hacemos predicciones con los mismos datos para ver cómo se ajusta\ny_pred_simple = model_simple.predict(x)\n\n# Mostramos la ecuación que aprendió el modelo\nprint(f\"Intersección (β0): {model_simple.intercept_:.2f}\")\nprint(f\"Coeficiente (β1): {model_simple.coef_[0]:.2f}\")\nprint(\"\\nEsto significa que por cada punto de incremento en el ingreso mediano, el precio sube aproximadamente $\", round(model_simple.coef_[0], 2))\n\n# Graficamos los datos reales y la línea de regresión\nplt.figure(figsize=(8, 5))\nplt.scatter(x, y, color='blue', alpha=0.1, label='Datos Reales')\nplt.plot(x, y_pred_simple, color='red', lw=2, label='Línea de Regresión')\nplt.xlabel(\"Ingreso Mediano\")\nplt.ylabel(\"Valor Mediano de la Vivienda\")\nplt.title(\"Regresión Lineal Simple: Valor de Vivienda vs Ingreso Mediano\")\nplt.legend()\nplt.show()",
+      "execution_count": 7,
+      "outputs": [
+        {
+          "type": "stream",
+          "text": "Intersección (β0): 45085.58\nCoeficiente (β1): 41793.85\n\nEsto significa que por cada punto de incremento en el ingreso mediano, el precio sube aproximadamente $ 41793.85\n",
+          "figure": null
+        },
+        {
+          "type": "display_data",
+          "text": "<Figure size 800x500 with 1 Axes>",
+          "figure": "work\\figures\\notebook-02.png"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "type": "markdown",
+      "source": "---\n## 🚀 8. Regresión Lineal Múltiple\n\nAhora daremos un paso más. En la vida real, el precio de una casa no depende de un solo factor.\nEn esta sección, utilizaremos **todas las variables numéricas disponibles** (Ingreso, Edad, Habitaciones, Dormitorios y Población) para predecir el precio.\n\nAdemás, dividiremos nuestros datos en dos grupos:\n1. **Entrenamiento (80%)**: Para que el modelo aprenda.\n2. **Prueba (20%)**: Para evaluar el modelo con datos que nunca ha visto (evitar el sobreajuste).",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 13,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 5: REGRESIÓN LINEAL MÚLTIPLE\n# ==============================================================================\n# 1. Limpieza rápida: El dataset real de California contiene algunos valores nulos en 'total_bedrooms'.\n# Los rellenamos con la mediana antes de entrenar.\ndf_clean = df.copy()\ndf_clean['total_bedrooms'] = df_clean['total_bedrooms'].fillna(df_clean['total_bedrooms'].median())\n\n# 2. Separamos las variables independientes (X) de la variable a predecir (y)\n# Eliminamos la variable objetivo y las columnas de texto\nX = df_clean.drop(['median_house_value', 'ocean_proximity'], axis=1, errors='ignore')\ny = df_clean['median_house_value']\n\n# 3. Dividimos los datos en conjuntos de Entrenamiento (80%) y Prueba (20%)\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n\nprint(f\"Datos de entrenamiento: {X_train.shape[0]} filas\")\nprint(f\"Datos de prueba: {X_test.shape[0]} filas\")\n\n# 4. Creamos y entrenamos el modelo múltiple\nmodel_multiple = LinearRegression()\nmodel_multiple.fit(X_train, y_train)",
+      "execution_count": 8,
+      "outputs": [
+        {
+          "type": "stream",
+          "text": "Datos de entrenamiento: 16512 filas\nDatos de prueba: 4128 filas\n",
+          "figure": null
+        },
+        {
+          "type": "execute_result",
+          "text": "LinearRegression()",
+          "figure": null
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "type": "markdown",
+      "source": "---\n## 📊 9. Evaluar el Modelo\n\nAhora que el modelo ya aprendió, vamos a evaluar qué tan bien predice usando el conjunto de **prueba** (datos que nunca vio durante el entrenamiento).",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 15,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 6: EVALUAR EL MODELO\n# ==============================================================================\n# Hacemos predicciones sobre el conjunto de PRUEBA (datos que el modelo nunca ha visto)\ny_pred_multiple = model_multiple.predict(X_test)\n\n# Calculamos las métricas de evaluación\nmse = mean_squared_error(y_test, y_pred_multiple)\nr2 = r2_score(y_test, y_pred_multiple)\n\nprint(\"--- Métricas de Evaluación del Modelo Múltiple ---\")\nprint(f\"Mean Squared Error (MSE): {mse:,.2f}\")\nprint(f\"R-squared (R²): {r2:.4f}\")\nprint(\"\\nInterpretación:\")\nprint(f\"El modelo es capaz de explicar aproximadamente el {r2*100:.2f}% de la variación en los precios de las viviendas.\")",
+      "execution_count": 9,
+      "outputs": [
+        {
+          "type": "stream",
+          "text": "--- Métricas de Evaluación del Modelo Múltiple ---\nMean Squared Error (MSE): 5,059,928,371.17\nR-squared (R²): 0.6139\n\nInterpretación:\nEl modelo es capaz de explicar aproximadamente el 61.39% de la variación en los precios de las viviendas.\n",
+          "figure": null
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "type": "markdown",
+      "source": "---\n## 🎮 10. Simulador de Predicción\n\nVamos a crear un pequeño simulador interactivo donde el usuario ingresa los datos de una vivienda y el modelo predice su precio.",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "index": 17,
+      "type": "code",
+      "source": "# ==============================================================================\n# PASO 7: PREDICCIÓN INTERACTIVA (SIMULADOR ACTUALIZADO)\n# ==============================================================================\nimport pandas as pd\n\nprint(\"🏡 SIMULADOR DE PRECIOS DE VIVIENDAS (California) 🏡\")\nprint(\"Por favor, ingresa las características solicitadas.\")\nprint(\"Nota: Las coordenadas geográficas (latitud/longitud) se calcularán automáticamente con la mediana de la región.\\n\")\n\n# Definimos las columnas que el usuario va a ingresar manualmente\nmanual_features = [\n    'housing_median_age',\n    'total_rooms',\n    'total_bedrooms',\n    'population',\n    'households',\n    'median_income'\n]\n\nuser_input = {}\n\n# Solicitar de forma interactiva los datos al usuario mostrando los rangos mínimos y máximos reales\nfor feature in manual_features:\n    min_val = df_clean[feature].min()\n    max_val = df_clean[feature].max()\n\n    # Mensajes personalizados para guiar mejor al usuario\n    desc = feature.replace('_', ' ').capitalize()\n    if feature == 'median_income':\n        desc = \"Ingreso promedio de la zona (en decenas de miles de dólares, ej: 3.5 = $35,000)\"\n\n    while True:\n        try:\n            val_input = input(f\"➡️ {desc} [Rango sugerido: {min_val:.1f} a {max_val:.1f}]: \")\n            value = float(val_input)\n            user_input[feature] = value\n            break\n        except ValueError:\n            print(f\"⚠️ Entrada inválida. Por favor, ingresa un número dentro del rango sugerido ({min_val:.1f} - {max_val:.1f}).\")\n\n# Asignar automáticamente los valores medianos para latitud y longitud del dataset original\nuser_input['longitude'] = df_clean['longitude'].median()\nuser_input['latitude'] = df_clean['latitude'].median()\n\n# Convertimos el diccionario a un DataFrame con el orden de columnas exacto que espera el modelo\ninput_data = pd.DataFrame([user_input])\ninput_data = input_data[X_train.columns]\n\n# Realizamos la predicción con el modelo múltiple entrenado\npredicted_price = model_multiple.predict(input_data)\n\n# Mostramos el resultado de la estimación\nprint(\"\\n\" + \"=\"*65)\nprint(f\"💰 PRECIO ESTIMADO DE LA VIVIENDA EN ESTA ZONA: ${max(0, predicted_price[0]):,.2f}\")\nprint(\"=\"*65)",
+      "execution_count": 15,
+      "outputs": [
+        {
+          "type": "stream",
+          "text": "🏡 SIMULADOR DE PRECIOS DE VIVIENDAS (California) 🏡\nPor favor, ingresa las características solicitadas.\nNota: Las coordenadas geográficas (latitud/longitud) se calcularán automáticamente con la mediana de la región.\n\n➡️ Housing median age [Rango sugerido: 1.0 a 52.0]: 5\n➡️ Total rooms [Rango sugerido: 2.0 a 39320.0]: 4\n➡️ Total bedrooms [Rango sugerido: 1.0 a 6445.0]: 1\n➡️ Population [Rango sugerido: 3.0 a 35682.0]: 10\n➡️ Households [Rango sugerido: 1.0 a 6082.0]: 10\n➡️ Ingreso promedio de la zona (en decenas de miles de dólares, ej: 3.5 = $35,000) [Rango sugerido: 0.5 a 15.0]: 0.8\n\n=================================================================\n💰 PRECIO ESTIMADO DE LA VIVIENDA EN ESTA ZONA: $57,455.18\n=================================================================\n",
+          "figure": null
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "type": "markdown",
+      "source": "---\n## 💡 Conclusiones y Recomendaciones\n\n### ¿Qué aprendimos?\n1. **Regresión Lineal Simple**: Útil para entender la relación entre **una variable** y el precio.\n2. **Regresión Lineal Múltiple**: Mucho más precisa porque considera **varios factores** al mismo tiempo.\n3. **División de datos**: Es fundamental separar los datos en entrenamiento y prueba para evaluar el modelo de forma justa.\n4. **Métricas de evaluación**: El R² nos dice qué tan bien el modelo explica los datos.\n\n### 🔍 Ideas para mejorar el modelo:\n- Probar modelos más avanzados como **Random Forest** o **XGBoost**.\n- Añadir más variables (ubicación geográfica, cercanía a servicios, etc.).\n- Realizar ingeniería de características (crear nuevas variables combinando las existentes).\n\n### 🎯 Experimenta con el simulador:\nPrueba ingresando valores extremos (ej. una población de 100,000 o un ingreso de 200,000) y observa cómo el modelo reacciona basándose en los patrones que aprendió.\n\n---\n🎉 **¡Felicidades! Has completado el tutorial de Regresión Lineal aplicado a precios de viviendas.**",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "warnings": []
+}

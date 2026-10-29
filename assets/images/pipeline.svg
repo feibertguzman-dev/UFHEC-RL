@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 420" width="1100" height="420" role="img">
+<defs>
+  <linearGradient id="p" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#22D3EE"/>
+    <stop offset="1" stop-color="#14B8A6"/>
+  </linearGradient>
+</defs>
+<rect width="1100" height="420" rx="26" fill="#F7F9FC"/>
+<text x="56" y="58" fill="#0B1220" font-family="Arial, sans-serif" font-size="24" font-weight="700">Pipeline CRISP-ML(Q)</text>
+<line x1="100" y1="190" x2="1000" y2="190" stroke="url(#p)" stroke-width="4" stroke-dasharray="10 10" opacity="0.55"/>
+
+<g transform="translate(110 130)">
+  <circle cx="30" cy="60" r="28" fill="#0B1220"/>
+  <text x="30" y="67" text-anchor="middle" fill="#22D3EE" font-family="Arial, sans-serif" font-size="14" font-weight="700">01</text>
+  <rect x="-50" y="110" width="160" height="110" rx="16" fill="#FFFFFF" stroke="#DCE4EF"/>
+  <text x="30" y="145" text-anchor="middle" fill="#0B1220" font-family="Arial, sans-serif" font-size="16" font-weight="700">Datos</text>
+  <text x="30" y="174" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="12">housing.csv</text>
+</g>
+<g transform="translate(300 130)">
+  <circle cx="30" cy="60" r="28" fill="#0B1220"/>
+  <text x="30" y="67" text-anchor="middle" fill="#22D3EE" font-family="Arial, sans-serif" font-size="14" font-weight="700">02</text>
+  <rect x="-50" y="110" width="160" height="110" rx="16" fill="#FFFFFF" stroke="#DCE4EF"/>
+  <text x="30" y="145" text-anchor="middle" fill="#0B1220" font-family="Arial, sans-serif" font-size="16" font-weight="700">Preparación</text>
+  <text x="30" y="174" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="12">limpieza + imputación</text>
+</g>
+<g transform="translate(490 130)">
+  <circle cx="30" cy="60" r="28" fill="#0B1220"/>
+  <text x="30" y="67" text-anchor="middle" fill="#22D3EE" font-family="Arial, sans-serif" font-size="14" font-weight="700">03</text>
+  <rect x="-50" y="110" width="160" height="110" rx="16" fill="#FFFFFF" stroke="#DCE4EF"/>
+  <text x="30" y="145" text-anchor="middle" fill="#0B1220" font-family="Arial, sans-serif" font-size="16" font-weight="700">Modelado</text>
+  <text x="30" y="174" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="12">regresión simple y múltiple</text>
+</g>
+<g transform="translate(680 130)">
+  <circle cx="30" cy="60" r="28" fill="#0B1220"/>
+  <text x="30" y="67" text-anchor="middle" fill="#22D3EE" font-family="Arial, sans-serif" font-size="14" font-weight="700">04</text>
+  <rect x="-50" y="110" width="160" height="110" rx="16" fill="#FFFFFF" stroke="#DCE4EF"/>
+  <text x="30" y="145" text-anchor="middle" fill="#0B1220" font-family="Arial, sans-serif" font-size="16" font-weight="700">Evaluación</text>
+  <text x="30" y="174" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="12">MSE · RMSE · MAE · R²</text>
+</g>
+<g transform="translate(870 130)">
+  <circle cx="30" cy="60" r="28" fill="#0B1220"/>
+  <text x="30" y="67" text-anchor="middle" fill="#22D3EE" font-family="Arial, sans-serif" font-size="14" font-weight="700">05</text>
+  <rect x="-50" y="110" width="160" height="110" rx="16" fill="#FFFFFF" stroke="#DCE4EF"/>
+  <text x="30" y="145" text-anchor="middle" fill="#0B1220" font-family="Arial, sans-serif" font-size="16" font-weight="700">Despliegue</text>
+  <text x="30" y="174" text-anchor="middle" fill="#64748B" font-family="Arial, sans-serif" font-size="12">Streamlit + GitHub Pages</text>
+</g><text x="56" y="385" fill="#64748B" font-family="Arial, sans-serif" font-size="14">Cada fase deja evidencia reproducible: datos, código, métricas y documentación.</text></svg>

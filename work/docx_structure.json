@@ -1,0 +1,2239 @@
+{
+  "source": "C:\\Users\\Feibert\\OneDrive\\Documents\\UFHEC\\UFHEC_ML\\Project_RL\\Material_1_Proyecto_ML_UFHEC .docx",
+  "paragraphs": [
+    {
+      "index": 0,
+      "block_index": 0,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 1,
+      "block_index": 1,
+      "style": "Normal",
+      "text": "Proyecto: Machine Learning"
+    },
+    {
+      "index": 2,
+      "block_index": 2,
+      "style": "Normal",
+      "text": "ACTIVIDAD "
+    },
+    {
+      "index": 3,
+      "block_index": 3,
+      "style": "Normal",
+      "text": "“Framework en Machine Learning y Analítica Predictiva-Prescriptiva para Optimizar la Permanencia Estudiantil y la Pertinencia Curricular mediante la Integración de Datos Abiertos y SNIES”"
+    },
+    {
+      "index": 4,
+      "block_index": 4,
+      "style": "Normal",
+      "text": "Taller colaborativo en grupos de 3-4 integrantes · 70 minutos"
+    },
+    {
+      "index": 5,
+      "block_index": 6,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 6,
+      "block_index": 7,
+      "style": "Heading 1",
+      "text": "Parte 1 — Plantilla de diseño del proyecto (30 minutos)"
+    },
+    {
+      "index": 7,
+      "block_index": 9,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 8,
+      "block_index": 10,
+      "style": "Normal",
+      "text": "FOTOS:"
+    },
+    {
+      "index": 9,
+      "block_index": 11,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 10,
+      "block_index": 12,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 11,
+      "block_index": 13,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 12,
+      "block_index": 15,
+      "style": "Normal",
+      "text": "Describan el problema o necesidad concreta que identifican en su contexto:"
+    },
+    {
+      "index": 13,
+      "block_index": 16,
+      "style": "Normal",
+      "text": "Describan un problema real en su contexto relacionado con:"
+    },
+    {
+      "index": 14,
+      "block_index": 17,
+      "style": "Normal",
+      "text": "☒ Transformación digital"
+    },
+    {
+      "index": 15,
+      "block_index": 18,
+      "style": "Normal",
+      "text": "☒ Brecha tecnológica"
+    },
+    {
+      "index": 16,
+      "block_index": 19,
+      "style": "Normal",
+      "text": "☒ Toma de decisiones basada en datos"
+    },
+    {
+      "index": 17,
+      "block_index": 20,
+      "style": "Normal",
+      "text": "☒ Uso de IA en educación"
+    },
+    {
+      "index": 18,
+      "block_index": 21,
+      "style": "Normal",
+      "text": "☒ Educación"
+    },
+    {
+      "index": 19,
+      "block_index": 22,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 20,
+      "block_index": 23,
+      "style": "Normal",
+      "text": "✍️Introducción"
+    },
+    {
+      "index": 21,
+      "block_index": 25,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 22,
+      "block_index": 26,
+      "style": "Normal",
+      "text": "✍️Describe el problema antecedente:"
+    },
+    {
+      "index": 23,
+      "block_index": 28,
+      "style": "Normal",
+      "text": "🎯 Variable objetivo (target)"
+    },
+    {
+      "index": 24,
+      "block_index": 29,
+      "style": "Normal",
+      "text": "👉 ¿Qué quieres predecir o analizar?"
+    },
+    {
+      "index": 25,
+      "block_index": 31,
+      "style": "Normal",
+      "text": "🎯 Variables Independientes "
+    },
+    {
+      "index": 26,
+      "block_index": 33,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 27,
+      "block_index": 34,
+      "style": "Normal",
+      "text": "❓ Pregunta de investigación (orientada a ML):\n👉 ¿Qué quieres predecir, clasificar o descubrir?"
+    },
+    {
+      "index": 28,
+      "block_index": 36,
+      "style": "Normal",
+      "text": "🎯¿A quién impacta? "
+    },
+    {
+      "index": 29,
+      "block_index": 38,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 30,
+      "block_index": 39,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 31,
+      "block_index": 40,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 32,
+      "block_index": 42,
+      "style": "Normal",
+      "text": "MODELO DE MACHINE LEARNING"
+    },
+    {
+      "index": 33,
+      "block_index": 43,
+      "style": "Normal",
+      "text": "¿Tipo de enfoque? Marquen una [X] y justifiquen:"
+    },
+    {
+      "index": 34,
+      "block_index": 45,
+      "style": "Normal",
+      "text": "NOTA: (para que nadie se pierda)"
+    },
+    {
+      "index": 35,
+      "block_index": 46,
+      "style": "Normal",
+      "text": " ¿Quieres predecir la deserción o la pertinencia curricular? → Aprendizaje Supervisado."
+    },
+    {
+      "index": 36,
+      "block_index": 47,
+      "style": "Normal",
+      "text": " ¿Quieres descubrir grupos de programas o instituciones con comportamientos similares? → Aprendizaje No Supervisado."
+    },
+    {
+      "index": 37,
+      "block_index": 48,
+      "style": "Normal",
+      "text": " ¿Quieres recomendar estrategias institucionales basadas en los resultados? → Analítica Prescriptiva."
+    },
+    {
+      "index": 38,
+      "block_index": 49,
+      "style": "Normal",
+      "text": " ¿Quieres automatizar la generación de informes o recomendaciones mediante IA generativa? → Modelos Preentrenados (trabajo futuro)."
+    },
+    {
+      "index": 39,
+      "block_index": 50,
+      "style": "Normal",
+      "text": "🎯 Modelo seleccionado"
+    },
+    {
+      "index": 40,
+      "block_index": 51,
+      "style": "Normal",
+      "text": "El proyecto implementará un Framework de Machine Learning Multimodelo capaz de comparar automáticamente diferentes algoritmos mediante técnicas de AutoML."
+    },
+    {
+      "index": 41,
+      "block_index": 52,
+      "style": "Normal",
+      "text": "La experimentación se realizará utilizando PyCaret como plataforma principal para entrenamiento, validación cruzada, comparación y selección automática de modelos, complementado con FLAML (Fast Lightweight AutoML) para optimizar los tiempos de entrenamiento y la búsqueda eficiente de hiperparámetros."
+    },
+    {
+      "index": 42,
+      "block_index": 53,
+      "style": "Normal",
+      "text": "El framework evaluará múltiples algoritmos antes de seleccionar el modelo con mejor desempeño para cada problema."
+    },
+    {
+      "index": 43,
+      "block_index": 54,
+      "style": "Normal",
+      "text": "Modelos Supervisados"
+    },
+    {
+      "index": 44,
+      "block_index": 55,
+      "style": "Normal",
+      "text": "“Random Forest”"
+    },
+    {
+      "index": 45,
+      "block_index": 56,
+      "style": "Normal",
+      "text": "XGBoost"
+    },
+    {
+      "index": 46,
+      "block_index": 57,
+      "style": "Normal",
+      "text": "LightGBM"
+    },
+    {
+      "index": 47,
+      "block_index": 58,
+      "style": "Normal",
+      "text": "CatBoost"
+    },
+    {
+      "index": 48,
+      "block_index": 59,
+      "style": "Normal",
+      "text": "Extra Trees"
+    },
+    {
+      "index": 49,
+      "block_index": 60,
+      "style": "Normal",
+      "text": "“Gradient Boosting”"
+    },
+    {
+      "index": 50,
+      "block_index": 61,
+      "style": "Normal",
+      "text": "AdaBoost"
+    },
+    {
+      "index": 51,
+      "block_index": 62,
+      "style": "Normal",
+      "text": "“Decision Tree”"
+    },
+    {
+      "index": 52,
+      "block_index": 63,
+      "style": "Normal",
+      "text": "“Support Vector Machine (SVM)”"
+    },
+    {
+      "index": 53,
+      "block_index": 64,
+      "style": "Normal",
+      "text": "“K-Nearest Neighbors (KNN)”"
+    },
+    {
+      "index": 54,
+      "block_index": 65,
+      "style": "Normal",
+      "text": "“Ridge Regression”"
+    },
+    {
+      "index": 55,
+      "block_index": 66,
+      "style": "Normal",
+      "text": "“Lasso Regression”"
+    },
+    {
+      "index": 56,
+      "block_index": 67,
+      "style": "Normal",
+      "text": "“Regresión Lineal” "
+    },
+    {
+      "index": 57,
+      "block_index": 68,
+      "style": "Normal",
+      "text": "“Regresión Logística”"
+    },
+    {
+      "index": 58,
+      "block_index": 69,
+      "style": "Normal",
+      "text": "Elastic Net"
+    },
+    {
+      "index": 59,
+      "block_index": 70,
+      "style": "Normal",
+      "text": "Redes Neuronales (MLP)"
+    },
+    {
+      "index": 60,
+      "block_index": 71,
+      "style": "Normal",
+      "text": "Modelos No Supervisados"
+    },
+    {
+      "index": 61,
+      "block_index": 72,
+      "style": "Normal",
+      "text": "“K-Means”"
+    },
+    {
+      "index": 62,
+      "block_index": 73,
+      "style": "Normal",
+      "text": "MiniBatch K-Means"
+    },
+    {
+      "index": 63,
+      "block_index": 74,
+      "style": "Normal",
+      "text": "“DBSCAN”"
+    },
+    {
+      "index": 64,
+      "block_index": 75,
+      "style": "Normal",
+      "text": "HDBSCAN"
+    },
+    {
+      "index": 65,
+      "block_index": 76,
+      "style": "Normal",
+      "text": "Agglomerative Clustering"
+    },
+    {
+      "index": 66,
+      "block_index": 77,
+      "style": "Normal",
+      "text": "Gaussian Mixture Models (GMM)"
+    },
+    {
+      "index": 67,
+      "block_index": 78,
+      "style": "Normal",
+      "text": "Spectral Clustering"
+    },
+    {
+      "index": 68,
+      "block_index": 79,
+      "style": "Normal",
+      "text": "“PCA”"
+    },
+    {
+      "index": 69,
+      "block_index": 80,
+      "style": "Normal",
+      "text": "UMAP"
+    },
+    {
+      "index": 70,
+      "block_index": 81,
+      "style": "Normal",
+      "text": "t-SNE"
+    },
+    {
+      "index": 71,
+      "block_index": 82,
+      "style": "Normal",
+      "text": "Isolation Forest"
+    },
+    {
+      "index": 72,
+      "block_index": 83,
+      "style": "Normal",
+      "text": "Local Outlier Factor (LOF)"
+    },
+    {
+      "index": 73,
+      "block_index": 84,
+      "style": "Normal",
+      "text": "La selección del modelo óptimo se realizará mediante métricas de desempeño como:"
+    },
+    {
+      "index": 74,
+      "block_index": 85,
+      "style": "Normal",
+      "text": "Accuracy"
+    },
+    {
+      "index": 75,
+      "block_index": 86,
+      "style": "Normal",
+      "text": "Precision"
+    },
+    {
+      "index": 76,
+      "block_index": 87,
+      "style": "Normal",
+      "text": "Recall"
+    },
+    {
+      "index": 77,
+      "block_index": 88,
+      "style": "Normal",
+      "text": "F1-Score"
+    },
+    {
+      "index": 78,
+      "block_index": 89,
+      "style": "Normal",
+      "text": "ROC-AUC"
+    },
+    {
+      "index": 79,
+      "block_index": 90,
+      "style": "Normal",
+      "text": "MAE"
+    },
+    {
+      "index": 80,
+      "block_index": 91,
+      "style": "Normal",
+      "text": "RMSE"
+    },
+    {
+      "index": 81,
+      "block_index": 92,
+      "style": "Normal",
+      "text": "R²"
+    },
+    {
+      "index": 82,
+      "block_index": 93,
+      "style": "Normal",
+      "text": "Dependiendo de la naturaleza de cada variable objetivo. El framework comparará automáticamente el rendimiento de cada algoritmo mediante validación cruzada y métricas de evaluación, seleccionando el modelo con mejor capacidad predictiva e interpretativa para cada escenario de análisis."
+    },
+    {
+      "index": 83,
+      "block_index": 94,
+      "style": "Normal",
+      "text": "🧠 Justificación"
+    },
+    {
+      "index": 84,
+      "block_index": 95,
+      "style": "Normal",
+      "text": "¿Qué tipo de datos tienes? "
+    },
+    {
+      "index": 85,
+      "block_index": 97,
+      "style": "Normal",
+      "text": "¿Qué problema resuelve este modelo? "
+    },
+    {
+      "index": 86,
+      "block_index": 99,
+      "style": "Normal",
+      "text": "¿Por qué es la mejor opción?"
+    },
+    {
+      "index": 87,
+      "block_index": 101,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 88,
+      "block_index": 102,
+      "style": "Normal",
+      "text": "🎯 Arquitectura de Datos"
+    },
+    {
+      "index": 89,
+      "block_index": 103,
+      "style": "Normal",
+      "text": "Para un proyecto de investigación, la arquitectura de datos se entiende mucho mejor en formato tabular. Además, deja más claro el flujo ETL + Machine Learning + Analítica Prescriptiva. Te propongo la siguiente versión:"
+    },
+    {
+      "index": 90,
+      "block_index": 104,
+      "style": "Normal",
+      "text": "Arquitectura de Datos del Framework"
+    },
+    {
+      "index": 91,
+      "block_index": 106,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 92,
+      "block_index": 107,
+      "style": "Normal",
+      "text": "Fuentes Oficiales Integradas"
+    },
+    {
+      "index": 93,
+      "block_index": 109,
+      "style": "Normal",
+      "text": "Valor agregado de esta arquitectura"
+    },
+    {
+      "index": 94,
+      "block_index": 110,
+      "style": "Normal",
+      "text": "Esta arquitectura combina Datos Abiertos, consumo automatizado mediante APIs, procesos ETL, AutoML (PyCaret y FLAML), aprendizaje supervisado, aprendizaje no supervisado y analítica prescriptiva, conformando un Framework Inteligente de Machine Learning Multimodelo que automatiza el ciclo completo de adquisición, procesamiento, análisis y generación de recomendaciones para apoyar la toma de decisiones estratégicas en las Instituciones de Educación Superior colombianas. Esto está totalmente alineado con el enfoque de innovación y reutilización de datos promovido por Datos Abiertos Colombia."
+    },
+    {
+      "index": 95,
+      "block_index": 111,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 96,
+      "block_index": 112,
+      "style": "Normal",
+      "text": "3. Los datos que necesitarían"
+    },
+    {
+      "index": 97,
+      "block_index": 114,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 98,
+      "block_index": 115,
+      "style": "Normal",
+      "text": "Datos y Analítica para la Toma de Decisiones"
+    },
+    {
+      "index": 99,
+      "block_index": 116,
+      "style": "Normal",
+      "text": "🔄 Proceso ETL (Extract, Transform, Load)"
+    },
+    {
+      "index": 100,
+      "block_index": 117,
+      "style": "Normal",
+      "text": "Antes de entrenar los modelos de Machine Learning, los datos serán preparados mediante un proceso ETL automatizado que garantizará la calidad, consistencia e integración de la información proveniente de múltiples fuentes oficiales."
+    },
+    {
+      "index": 101,
+      "block_index": 118,
+      "style": "Normal",
+      "text": "Pipeline Inteligente del Framework"
+    },
+    {
+      "index": 102,
+      "block_index": 119,
+      "style": "Normal",
+      "text": "Definir las variables objetivo (Tasa de Deserción Proyectada e Índice de Pertinencia Curricular). "
+    },
+    {
+      "index": 103,
+      "block_index": 120,
+      "style": "Normal",
+      "text": "Consumir automáticamente los datasets oficiales mediante APIs REST (SNIES, Datos Abiertos Colombia, DANE y OLE). "
+    },
+    {
+      "index": 104,
+      "block_index": 121,
+      "style": "Normal",
+      "text": "Integrar la información académica, laboral, socioeconómica y territorial en un único repositorio analítico. "
+    },
+    {
+      "index": 105,
+      "block_index": 122,
+      "style": "Normal",
+      "text": "Validar la calidad de los datos mediante reglas de negocio (duplicados, consistencia, formatos y valores fuera de rango). "
+    },
+    {
+      "index": 106,
+      "block_index": 123,
+      "style": "Normal",
+      "text": "Realizar procesos de limpieza, transformación e ingeniería de características (Feature Engineering). "
+    },
+    {
+      "index": 107,
+      "block_index": 124,
+      "style": "Normal",
+      "text": "Seleccionar automáticamente las variables más relevantes mediante técnicas de selección de características. "
+    },
+    {
+      "index": 108,
+      "block_index": 125,
+      "style": "Normal",
+      "text": "Dividir los datos en conjuntos de entrenamiento, validación y prueba utilizando validación cruzada. "
+    },
+    {
+      "index": 109,
+      "block_index": 126,
+      "style": "Normal",
+      "text": "Comparar automáticamente múltiples algoritmos mediante PyCaret y FLAML, evaluando modelos supervisados y no supervisados. "
+    },
+    {
+      "index": 110,
+      "block_index": 127,
+      "style": "Normal",
+      "text": "Seleccionar el mejor modelo según métricas de desempeño e interpretabilidad. "
+    },
+    {
+      "index": 111,
+      "block_index": 128,
+      "style": "Normal",
+      "text": "Publicar los resultados en una plataforma Streamlit con dashboards interactivos, predicciones y recomendaciones prescriptivas para apoyar la toma de decisiones institucionales. "
+    },
+    {
+      "index": 112,
+      "block_index": 129,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 113,
+      "block_index": 130,
+      "style": "Normal",
+      "text": "📌 Tener presente ¿Qué significa ETL?"
+    },
+    {
+      "index": 114,
+      "block_index": 131,
+      "style": "Normal",
+      "text": "Extract (Extraer): Obtener datos desde múltiples fuentes oficiales mediante APIs, servicios REST y conjuntos de datos abiertos. "
+    },
+    {
+      "index": 115,
+      "block_index": 132,
+      "style": "Normal",
+      "text": "Transform (Transformar): Limpiar, integrar, normalizar y preparar los datos para el análisis y entrenamiento de modelos. "
+    },
+    {
+      "index": 116,
+      "block_index": 133,
+      "style": "Normal",
+      "text": "Load (Cargar): Consolidar la información en un repositorio estructurado para Machine Learning, visualización y analítica prescriptiva. "
+    },
+    {
+      "index": 117,
+      "block_index": 134,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 118,
+      "block_index": 135,
+      "style": "Normal",
+      "text": "🧠 Aplicación en el proyecto"
+    },
+    {
+      "index": 119,
+      "block_index": 136,
+      "style": "Normal",
+      "text": "🔹 Extract — ¿De dónde obtienen los datos?"
+    },
+    {
+      "index": 120,
+      "block_index": 137,
+      "style": "Normal",
+      "text": "Los datos serán obtenidos automáticamente mediante consumo de APIs y servicios abiertos de entidades oficiales del Estado colombiano."
+    },
+    {
+      "index": 121,
+      "block_index": 139,
+      "style": "Normal",
+      "text": "La extracción será realizada mediante bibliotecas como Requests, Pandas, Sodapy (API Socrata) y procesos automatizados desarrollados en Python."
+    },
+    {
+      "index": 122,
+      "block_index": 140,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 123,
+      "block_index": 141,
+      "style": "Normal",
+      "text": "🔹 Transform — ¿Cómo preparan los datos?"
+    },
+    {
+      "index": 124,
+      "block_index": 142,
+      "style": "Normal",
+      "text": "☑ Limpieza de datos (duplicados e inconsistencias)"
+    },
+    {
+      "index": 125,
+      "block_index": 143,
+      "style": "Normal",
+      "text": "☑ Tratamiento de valores faltantes"
+    },
+    {
+      "index": 126,
+      "block_index": 144,
+      "style": "Normal",
+      "text": "☑ Integración de múltiples fuentes"
+    },
+    {
+      "index": 127,
+      "block_index": 145,
+      "style": "Normal",
+      "text": "☑ Conversión de variables categóricas"
+    },
+    {
+      "index": 128,
+      "block_index": 146,
+      "style": "Normal",
+      "text": "☑ Normalización y escalamiento"
+    },
+    {
+      "index": 129,
+      "block_index": 147,
+      "style": "Normal",
+      "text": "☑ Ingeniería de características (Feature Engineering)"
+    },
+    {
+      "index": 130,
+      "block_index": 148,
+      "style": "Normal",
+      "text": "☑ Selección automática de variables"
+    },
+    {
+      "index": 131,
+      "block_index": 149,
+      "style": "Normal",
+      "text": "☑ Reducción de dimensionalidad (PCA, UMAP)"
+    },
+    {
+      "index": 132,
+      "block_index": 150,
+      "style": "Normal",
+      "text": "☑ Detección de valores atípicos"
+    },
+    {
+      "index": 133,
+      "block_index": 151,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 134,
+      "block_index": 152,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 135,
+      "block_index": 153,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 136,
+      "block_index": 154,
+      "style": "Normal",
+      "text": "✍️ Describe:"
+    },
+    {
+      "index": 137,
+      "block_index": 155,
+      "style": "Normal",
+      "text": "Durante esta etapa se consolidarán los datos provenientes de las diferentes entidades gubernamentales, eliminando inconsistencias y registros duplicados. Posteriormente se aplicarán procesos de normalización, codificación de variables categóricas, imputación de datos faltantes e ingeniería de características para construir un dataset robusto que represente adecuadamente las condiciones académicas, laborales, demográficas y socioeconómicas de cada programa académico. Finalmente, se aplicarán técnicas de selección automática de variables y reducción de dimensionalidad para optimizar el desempeño de los modelos de Machine Learning."
+    },
+    {
+      "index": 138,
+      "block_index": 156,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 139,
+      "block_index": 157,
+      "style": "Normal",
+      "text": "🔹 Load — ¿Cómo dejan los datos listos?"
+    },
+    {
+      "index": 140,
+      "block_index": 158,
+      "style": "Normal",
+      "text": "☑ Dataset estructurado para Machine Learning"
+    },
+    {
+      "index": 141,
+      "block_index": 159,
+      "style": "Normal",
+      "text": "☑ Repositorio analítico integrado"
+    },
+    {
+      "index": 142,
+      "block_index": 160,
+      "style": "Normal",
+      "text": "☑ Base de datos para visualización"
+    },
+    {
+      "index": 143,
+      "block_index": 161,
+      "style": "Normal",
+      "text": "☑ Dashboards interactivos"
+    },
+    {
+      "index": 144,
+      "block_index": 162,
+      "style": "Normal",
+      "text": "☑ Modelos entrenados"
+    },
+    {
+      "index": 145,
+      "block_index": 163,
+      "style": "Normal",
+      "text": "✍️ Resultado esperado:"
+    },
+    {
+      "index": 146,
+      "block_index": 164,
+      "style": "Normal",
+      "text": "El resultado será un repositorio analítico institucional que almacenará los datos preparados para el entrenamiento de modelos de Machine Learning, acompañado de los modelos optimizados seleccionados automáticamente mediante PyCaret y FLAML. La plataforma desarrollada en Streamlit consumirá dichos modelos para generar predicciones, segmentaciones y recomendaciones prescriptivas orientadas a fortalecer la permanencia estudiantil, optimizar la pertinencia curricular y apoyar los procesos de Registro Calificado y Acreditación."
+    },
+    {
+      "index": 147,
+      "block_index": 165,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 148,
+      "block_index": 166,
+      "style": "Normal",
+      "text": "🧠 Nota clave"
+    },
+    {
+      "index": 149,
+      "block_index": 167,
+      "style": "Normal",
+      "text": "Los datos son el activo estratégico del proyecto."
+    },
+    {
+      "index": 150,
+      "block_index": 168,
+      "style": "Normal",
+      "text": "Datos de alta calidad permiten construir modelos más precisos, interpretables y confiables. "
+    },
+    {
+      "index": 151,
+      "block_index": 169,
+      "style": "Normal",
+      "text": "La integración de múltiples fuentes oficiales incrementa la capacidad predictiva y analítica del framework. "
+    },
+    {
+      "index": 152,
+      "block_index": 170,
+      "style": "Normal",
+      "text": "La actualización automática mediante APIs garantiza información vigente para apoyar la toma de decisiones basada en evidencia. "
+    },
+    {
+      "index": 153,
+      "block_index": 171,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 154,
+      "block_index": 172,
+      "style": "Normal",
+      "text": "🔍 ANÁLISIS EXPLORATORIO DE DATOS (EDA)"
+    },
+    {
+      "index": 155,
+      "block_index": 173,
+      "style": "Normal",
+      "text": "¿Qué harías antes de aplicar los modelos?"
+    },
+    {
+      "index": 156,
+      "block_index": 174,
+      "style": "Normal",
+      "text": "☑ Limpieza de datos"
+    },
+    {
+      "index": 157,
+      "block_index": 175,
+      "style": "Normal",
+      "text": "☑ Tratamiento de valores faltantes"
+    },
+    {
+      "index": 158,
+      "block_index": 176,
+      "style": "Normal",
+      "text": "☑ Integración de fuentes"
+    },
+    {
+      "index": 159,
+      "block_index": 177,
+      "style": "Normal",
+      "text": "☑ Visualización interactiva"
+    },
+    {
+      "index": 160,
+      "block_index": 178,
+      "style": "Normal",
+      "text": "☑ Análisis descriptivo"
+    },
+    {
+      "index": 161,
+      "block_index": 179,
+      "style": "Normal",
+      "text": "☑ Correlación entre variables"
+    },
+    {
+      "index": 162,
+      "block_index": 180,
+      "style": "Normal",
+      "text": "☑ Identificación de valores atípicos"
+    },
+    {
+      "index": 163,
+      "block_index": 181,
+      "style": "Normal",
+      "text": "☑ Balance de variables objetivo"
+    },
+    {
+      "index": 164,
+      "block_index": 182,
+      "style": "Normal",
+      "text": "☑ Reducción de dimensionalidad"
+    },
+    {
+      "index": 165,
+      "block_index": 183,
+      "style": "Normal",
+      "text": "☑ Segmentación preliminar"
+    },
+    {
+      "index": 166,
+      "block_index": 184,
+      "style": "Normal",
+      "text": "✍️ Describe:"
+    },
+    {
+      "index": 167,
+      "block_index": 185,
+      "style": "Normal",
+      "text": "El Análisis Exploratorio de Datos (EDA) permitirá comprender el comportamiento de los indicadores académicos, institucionales y socioeconómicos antes del entrenamiento de los modelos. Se evaluará la distribución de las variables, la calidad de los datos, las correlaciones entre indicadores de permanencia, deserción, empleabilidad y pertinencia curricular, así como la presencia de valores atípicos y posibles sesgos. También se analizará la evolución histórica de los programas académicos, la relación entre variables institucionales y territoriales, y la formación de clústeres mediante técnicas de aprendizaje no supervisado para identificar perfiles similares entre programas e Instituciones de Educación Superior."
+    },
+    {
+      "index": 168,
+      "block_index": 186,
+      "style": "Normal",
+      "text": "Como apoyo al análisis se generarán histogramas, diagramas de caja, mapas de calor de correlación, matrices de dispersión, análisis geoespacial, visualizaciones temporales y representaciones bidimensionales obtenidas mediante PCA y UMAP. Estos resultados servirán como insumo para la selección automática de variables, la comparación de algoritmos mediante PyCaret y FLAML y la construcción del componente de analítica prescriptiva del framework."
+    },
+    {
+      "index": 169,
+      "block_index": 187,
+      "style": "Normal",
+      "text": "Desafíos (Nivel Estratégico)"
+    },
+    {
+      "index": 170,
+      "block_index": 188,
+      "style": "Normal",
+      "text": "• Calidad de datos • Acceso • Integración • Sesgo"
+    },
+    {
+      "index": 171,
+      "block_index": 189,
+      "style": "Normal",
+      "text": "Matriz DOFA — Gestión de Datos en Proyectos de Inteligencia Artificial"
+    },
+    {
+      "index": 172,
+      "block_index": 191,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 173,
+      "block_index": 192,
+      "style": "Normal",
+      "text": "4. Objetivos SMART — Diseño del Proyecto de Inteligencia Artificial"
+    },
+    {
+      "index": 174,
+      "block_index": 193,
+      "style": "Normal",
+      "text": "🎯 Objetivo General"
+    },
+    {
+      "index": 175,
+      "block_index": 194,
+      "style": "Normal",
+      "text": "Diseñar e implementar un Framework de Machine Learning Multimodelo basado en Datos Abiertos, SNIES y analítica predictiva-prescriptiva que apoye a las Instituciones de Educación Superior colombianas en la optimización de la permanencia estudiantil y la evaluación de la pertinencia curricular mediante modelos inteligentes para la toma de decisiones basada en evidencia."
+    },
+    {
+      "index": 176,
+      "block_index": 195,
+      "style": "Normal",
+      "text": "Objetivo General SMART"
+    },
+    {
+      "index": 177,
+      "block_index": 196,
+      "style": "Normal",
+      "text": "Diseñar, desarrollar e implementar durante el ciclo del proyecto un Framework de Machine Learning Multimodelo que integre datos provenientes del SNIES, DANE, Observatorio Laboral para la Educación (OLE) y el Portal Nacional de Datos Abiertos, utilizando técnicas de aprendizaje supervisado, no supervisado y AutoML para predecir la tasa de deserción, estimar el Índice de Pertinencia Curricular y generar recomendaciones prescriptivas visualizadas mediante una plataforma interactiva desarrollada en Streamlit, fortaleciendo los procesos de planeación, aseguramiento de la calidad y toma de decisiones estratégicas en las Instituciones de Educación Superior colombianas."
+    },
+    {
+      "index": 178,
+      "block_index": 197,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 179,
+      "block_index": 198,
+      "style": "Normal",
+      "text": "✅ Objetivos Específicos"
+    },
+    {
+      "index": 180,
+      "block_index": 199,
+      "style": "Normal",
+      "text": "1. Problema (10 min)"
+    },
+    {
+      "index": 181,
+      "block_index": 200,
+      "style": "Normal",
+      "text": "Definir claramente el problema y las variables objetivo del proyecto."
+    },
+    {
+      "index": 182,
+      "block_index": 201,
+      "style": "Normal",
+      "text": "Problema:"
+    },
+    {
+      "index": 183,
+      "block_index": 202,
+      "style": "Normal",
+      "text": "Las Instituciones de Educación Superior disponen de grandes volúmenes de información provenientes de diversas fuentes oficiales; sin embargo, estos datos se encuentran dispersos y con un bajo nivel de aprovechamiento para apoyar la toma de decisiones estratégicas. El proyecto busca integrar dichos datos mediante un Framework de Machine Learning Multimodelo que permita predecir la permanencia estudiantil, evaluar la pertinencia curricular y generar recomendaciones prescriptivas orientadas al fortalecimiento institucional y al aseguramiento de la calidad."
+    },
+    {
+      "index": 184,
+      "block_index": 203,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 185,
+      "block_index": 204,
+      "style": "Normal",
+      "text": "2. Modelo de Machine Learning (10 min)"
+    },
+    {
+      "index": 186,
+      "block_index": 205,
+      "style": "Normal",
+      "text": "Seleccionar la estrategia metodológica más adecuada para cada tipo de problema."
+    },
+    {
+      "index": 187,
+      "block_index": 206,
+      "style": "Normal",
+      "text": "El framework implementará un enfoque híbrido de Inteligencia Artificial que combina:"
+    },
+    {
+      "index": 188,
+      "block_index": 207,
+      "style": "Normal",
+      "text": "Aprendizaje Supervisado para la predicción de la deserción estudiantil y la estimación del Índice de Pertinencia Curricular."
+    },
+    {
+      "index": 189,
+      "block_index": 208,
+      "style": "Normal",
+      "text": "Aprendizaje No Supervisado para descubrir patrones, segmentar programas académicos e identificar perfiles institucionales similares."
+    },
+    {
+      "index": 190,
+      "block_index": 209,
+      "style": "Normal",
+      "text": "AutoML mediante PyCaret y FLAML para comparar automáticamente múltiples algoritmos, optimizar hiperparámetros y seleccionar el modelo con mejor desempeño."
+    },
+    {
+      "index": 191,
+      "block_index": 210,
+      "style": "Normal",
+      "text": "Analítica Prescriptiva para transformar las predicciones en recomendaciones orientadas a la toma de decisiones."
+    },
+    {
+      "index": 192,
+      "block_index": 211,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 193,
+      "block_index": 212,
+      "style": "Normal",
+      "text": "3. Datos (5 min)"
+    },
+    {
+      "index": 194,
+      "block_index": 213,
+      "style": "Normal",
+      "text": "Definir qué datos se requieren y cuáles serán sus fuentes."
+    },
+    {
+      "index": 195,
+      "block_index": 214,
+      "style": "Normal",
+      "text": "Datos:"
+    },
+    {
+      "index": 196,
+      "block_index": 215,
+      "style": "Normal",
+      "text": "El framework integrará información académica, institucional, laboral, socioeconómica, demográfica y territorial proveniente del SNIES, DANE, Observatorio Laboral para la Educación (OLE) y el Portal Nacional de Datos Abiertos mediante APIs REST y procesos ETL automatizados. Los datos consolidados constituirán un repositorio analítico utilizado para entrenar, validar y desplegar los modelos de Machine Learning."
+    },
+    {
+      "index": 197,
+      "block_index": 216,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 198,
+      "block_index": 217,
+      "style": "Normal",
+      "text": "4. Riesgos (5 min)"
+    },
+    {
+      "index": 199,
+      "block_index": 218,
+      "style": "Normal",
+      "text": "Identificar los principales riesgos del proyecto y sus estrategias de mitigación."
+    },
+    {
+      "index": 200,
+      "block_index": 219,
+      "style": "Normal",
+      "text": "Riesgos identificados:"
+    },
+    {
+      "index": 201,
+      "block_index": 220,
+      "style": "Normal",
+      "text": "Variabilidad en la calidad y actualización de los datos abiertos."
+    },
+    {
+      "index": 202,
+      "block_index": 221,
+      "style": "Normal",
+      "text": "Dependencia de la disponibilidad de servicios API externos."
+    },
+    {
+      "index": 203,
+      "block_index": 222,
+      "style": "Normal",
+      "text": "Sesgos derivados de información histórica o desbalance de datos."
+    },
+    {
+      "index": 204,
+      "block_index": 223,
+      "style": "Normal",
+      "text": "Cambios en las estructuras de los conjuntos de datos oficiales."
+    },
+    {
+      "index": 205,
+      "block_index": 224,
+      "style": "Normal",
+      "text": "Riesgo de sobreajuste en algunos modelos de Machine Learning."
+    },
+    {
+      "index": 206,
+      "block_index": 225,
+      "style": "Normal",
+      "text": "Interpretación inadecuada de los resultados si no existe validación por expertos."
+    },
+    {
+      "index": 207,
+      "block_index": 226,
+      "style": "Normal",
+      "text": "Estrategias de mitigación:"
+    },
+    {
+      "index": 208,
+      "block_index": 227,
+      "style": "Normal",
+      "text": "Implementación de procesos automáticos de validación y control de calidad de datos."
+    },
+    {
+      "index": 209,
+      "block_index": 228,
+      "style": "Normal",
+      "text": "Actualización periódica del repositorio analítico mediante ETL automatizados."
+    },
+    {
+      "index": 210,
+      "block_index": 229,
+      "style": "Normal",
+      "text": "Comparación de múltiples algoritmos utilizando AutoML."
+    },
+    {
+      "index": 211,
+      "block_index": 230,
+      "style": "Normal",
+      "text": "Validación cruzada y monitoreo continuo del desempeño de los modelos."
+    },
+    {
+      "index": 212,
+      "block_index": 231,
+      "style": "Normal",
+      "text": "Incorporación de técnicas de Inteligencia Artificial Explicable (XAI) para mejorar la transparencia y trazabilidad de las recomendaciones."
+    },
+    {
+      "index": 213,
+      "block_index": 232,
+      "style": "Normal",
+      "text": "Participación de expertos académicos en la validación de los resultados antes de su utilización en procesos institucionales."
+    },
+    {
+      "index": 214,
+      "block_index": 233,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 215,
+      "block_index": 234,
+      "style": "Normal",
+      "text": "5. Presentación (5 min)"
+    },
+    {
+      "index": 216,
+      "block_index": 235,
+      "style": "Normal",
+      "text": "Explicar la propuesta de forma clara, comprensible y orientada al impacto."
+    },
+    {
+      "index": 217,
+      "block_index": 236,
+      "style": "Normal",
+      "text": "Presentación:"
+    },
+    {
+      "index": 218,
+      "block_index": 237,
+      "style": "Normal",
+      "text": "El Framework de Machine Learning Multimodelo transforma grandes volúmenes de Datos Abiertos en inteligencia institucional para apoyar la toma de decisiones en las Instituciones de Educación Superior colombianas. Mediante la integración automática de información proveniente del SNIES, DANE, OLE y el Portal Nacional de Datos Abiertos, el sistema predice la deserción estudiantil, evalúa la pertinencia curricular, identifica patrones ocultos y genera recomendaciones prescriptivas que fortalecen la permanencia estudiantil, optimizan los procesos de aseguramiento de la calidad y apoyan la formulación de estrategias académicas basadas en evidencia. La plataforma desarrollada en Streamlit permitirá visualizar los resultados de forma interactiva, facilitando el análisis oportuno por parte de directivos, analistas institucionales y responsables de la planeación estratégica."
+    },
+    {
+      "index": 219,
+      "block_index": 238,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 220,
+      "block_index": 239,
+      "style": "Normal",
+      "text": "5. La dimensión ética del proyecto"
+    },
+    {
+      "index": 221,
+      "block_index": 240,
+      "style": "Normal",
+      "text": "Reflexionen sobre cada uno de los siguientes aspectos éticos."
+    },
+    {
+      "index": 222,
+      "block_index": 242,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 223,
+      "block_index": 243,
+      "style": "Normal",
+      "text": "Parte 2 — Guía para el Elevator Pitch (5 minutos por grupo)"
+    },
+    {
+      "index": 224,
+      "block_index": 244,
+      "style": "Normal",
+      "text": "Minuto 0 – 1 | Problema"
+    },
+    {
+      "index": 225,
+      "block_index": 245,
+      "style": "Normal",
+      "text": "Actualmente, las Instituciones de Educación Superior cuentan con grandes volúmenes de información provenientes del SNIES, DANE, Observatorio Laboral para la Educación y el Portal Nacional de Datos Abiertos. Sin embargo, estos datos permanecen dispersos y con un bajo nivel de aprovechamiento para apoyar la toma de decisiones estratégicas relacionadas con la permanencia estudiantil, la deserción y la pertinencia curricular. Esta situación limita la capacidad institucional para anticipar riesgos y diseñar estrategias basadas en evidencia."
+    },
+    {
+      "index": 226,
+      "block_index": 246,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 227,
+      "block_index": 247,
+      "style": "Normal",
+      "text": "Minuto 1 – 2 | Solución"
+    },
+    {
+      "index": 228,
+      "block_index": 248,
+      "style": "Normal",
+      "text": "Nuestra propuesta consiste en desarrollar un Framework de Machine Learning Multimodelo basado en Datos Abiertos, capaz de integrar automáticamente información proveniente de diferentes fuentes oficiales mediante APIs REST y procesos ETL. El framework combina técnicas de aprendizaje supervisado, aprendizaje no supervisado y AutoML mediante PyCaret y FLAML para comparar múltiples algoritmos, seleccionar el modelo con mejor desempeño y generar analítica predictiva y prescriptiva orientada al fortalecimiento de la permanencia estudiantil y la pertinencia curricular."
+    },
+    {
+      "index": 229,
+      "block_index": 249,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 230,
+      "block_index": 250,
+      "style": "Normal",
+      "text": "Minuto 2 – 3 | Datos"
+    },
+    {
+      "index": 231,
+      "block_index": 251,
+      "style": "Normal",
+      "text": "El proyecto consume información oficial proveniente del SNIES, DANE, Observatorio Laboral para la Educación (OLE) y el Portal Nacional de Datos Abiertos, integrando indicadores académicos, institucionales, laborales, socioeconómicos, demográficos y territoriales. Estos datos son procesados mediante una arquitectura ETL automatizada que consolida un repositorio analítico para entrenar y validar modelos de Machine Learning, garantizando información actualizada, reproducible y escalable."
+    },
+    {
+      "index": 232,
+      "block_index": 252,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 233,
+      "block_index": 253,
+      "style": "Normal",
+      "text": "Minuto 3 – 4 | Ética"
+    },
+    {
+      "index": 234,
+      "block_index": 254,
+      "style": "Normal",
+      "text": "El framework incorpora principios de Inteligencia Artificial Responsable mediante la protección de datos, el uso de información anonimizada cuando sea necesario, la identificación y mitigación de sesgos, la aplicación de técnicas de Inteligencia Artificial Explicable (XAI) y la supervisión humana durante todo el proceso de toma de decisiones. El sistema no reemplaza a los expertos institucionales; por el contrario, proporciona evidencia analítica para apoyar decisiones más objetivas, transparentes y fundamentadas."
+    },
+    {
+      "index": 235,
+      "block_index": 255,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 236,
+      "block_index": 256,
+      "style": "Normal",
+      "text": "Minuto 4 – 5 | Impacto"
+    },
+    {
+      "index": 237,
+      "block_index": 257,
+      "style": "Normal",
+      "text": "El Framework de Machine Learning Multimodelo transforma los Datos Abiertos en inteligencia institucional para fortalecer la educación superior colombiana. La plataforma permitirá anticipar riesgos de deserción, evaluar la pertinencia curricular, descubrir patrones mediante aprendizaje no supervisado y generar recomendaciones prescriptivas que apoyen la planeación estratégica, la actualización de microcurrículos, la formulación de Documentos Maestros y los procesos de Registro Calificado y Acreditación. De esta manera, las Instituciones de Educación Superior podrán tomar decisiones oportunas, basadas en evidencia y orientadas al mejoramiento continuo, incrementando su capacidad de respuesta frente a las necesidades del entorno social, académico y productivo."
+    },
+    {
+      "index": 238,
+      "block_index": 258,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 239,
+      "block_index": 259,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 240,
+      "block_index": 260,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 241,
+      "block_index": 261,
+      "style": "Heading 1",
+      "text": "Rubrica de evaluación entre pares"
+    },
+    {
+      "index": 242,
+      "block_index": 262,
+      "style": "Normal",
+      "text": "Cada participante usa esta rúbrica para evaluar las presentaciones de OTROS grupos. El docente la usa para la evaluación final."
+    },
+    {
+      "index": 243,
+      "block_index": 263,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 244,
+      "block_index": 264,
+      "style": "Normal",
+      "text": "Grupo evaluado: _________________________________   Evaluado por: _________________________________"
+    },
+    {
+      "index": 245,
+      "block_index": 265,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 246,
+      "block_index": 267,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 247,
+      "block_index": 268,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 248,
+      "block_index": 269,
+      "style": "Normal",
+      "text": "✍️ Análisis del equipo"
+    },
+    {
+      "index": 249,
+      "block_index": 270,
+      "style": "Normal",
+      "text": "¿Cuál es el mayor desafío en su proyecto?"
+    },
+    {
+      "index": 250,
+      "block_index": 271,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 251,
+      "block_index": 273,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 252,
+      "block_index": 274,
+      "style": "Normal",
+      "text": "¿Cómo lo mitigarían estratégicamente?"
+    },
+    {
+      "index": 253,
+      "block_index": 275,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 254,
+      "block_index": 277,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 255,
+      "block_index": 278,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 256,
+      "block_index": 279,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 257,
+      "block_index": 280,
+      "style": "Heading 1",
+      "text": "Bibliografía"
+    },
+    {
+      "index": 258,
+      "block_index": 281,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 259,
+      "block_index": 282,
+      "style": "Normal",
+      "text": "Alamo, E. M.-C. (2024). Análisis de estrategias innovadoras para retención estudiantil con inteligencia artificial: una perspectiva multidisciplinaria. European Public & Social Innovation Review, 9, 1–20. https://doi.org/10.31637/epsir-2024-440 "
+    },
+    {
+      "index": 260,
+      "block_index": 283,
+      "style": "Normal",
+      "text": "Cardona, J. a. S., & Arbelaez, J. I. T. (2019). Aplicación de Learning Analytics y Educational Data Mining en una institución de educación superior en Colombia. Revista Ingenierías Universidad De Medellín, 19(36), 71–89. https://doi.org/10.22395/rium.v19n36a4 +"
+    },
+    {
+      "index": 261,
+      "block_index": 284,
+      "style": "Normal",
+      "text": "Leones Zambrano, P., Fernández Sánchez, L., Macias Bazurto, L., & Macias Bazurto, G. (2026). Sistema inteligente para la construcción y optimización de mallas curriculares en educación superior basado en análisis comparativo y aprendizaje automático: Intelligent system for the construction and optimization of curricular meshes in higher education based on comparative analysis and machine learning. LATAM Revista Latinoamericana De Ciencias Sociales Y Humanidades, 7(2), 614 – 627. https://doi.org/10.56712/latam.v7i2.5656 "
+    },
+    {
+      "index": 262,
+      "block_index": 285,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 263,
+      "block_index": 286,
+      "style": "Normal",
+      "text": "Fuentes del proyecto y bibliografía técnica:"
+    },
+    {
+      "index": 264,
+      "block_index": 287,
+      "style": "Normal",
+      "text": "1. Guzmán Pérez, F. A. Proyecto Stellarium: IA y ML para la Observación Astronómica. Repositorio local del proyecto, 2026."
+    },
+    {
+      "index": 265,
+      "block_index": 288,
+      "style": "Normal",
+      "text": "2. Scikit-learn Developers. RandomForestClassifier y métricas de clasificación. Documentación oficial de scikit-learn."
+    },
+    {
+      "index": 266,
+      "block_index": 289,
+      "style": "Normal",
+      "text": "3. Rhodes, B. Skyfield: High precision research-grade positions for planets and Earth satellites. Documentación oficial."
+    },
+    {
+      "index": 267,
+      "block_index": 290,
+      "style": "Normal",
+      "text": "4. Astropy Collaboration. Astropy: A community Python package for astronomy. Documentación oficial."
+    },
+    {
+      "index": 268,
+      "block_index": 291,
+      "style": "Normal",
+      "text": "5. OpenWeather. Weather API documentation para variables meteorológicas horarias."
+    },
+    {
+      "index": 269,
+      "block_index": 292,
+      "style": "Normal",
+      "text": "6. NASA/JPL. Development Ephemeris DE421 para posiciones planetarias."
+    },
+    {
+      "index": 270,
+      "block_index": 293,
+      "style": "Normal",
+      "text": "7. CRISP-ML(Q): metodología de calidad para proyectos de Machine Learning.\n\n"
+    },
+    {
+      "index": 271,
+      "block_index": 294,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "index": 272,
+      "block_index": 295,
+      "style": "Normal",
+      "text": "ANEXO 1: ENLACES A DATASETS REPRESENTATIVOS.\n\n"
+    },
+    {
+      "index": 273,
+      "block_index": 297,
+      "style": "Normal",
+      "text": ""
+    }
+  ],
+  "tables": [
+    {
+      "index": 0,
+      "block_index": 5,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "Como funciona esta actividad\nSu grupo diseñará una solución basada en Machine Learning orientada a resolver un problema real.\n⚠️ Mentalidad del ejercicio\nNo eres programador aquí.\nEres arquitecto de soluciones con Machine Learning.\nVas a definir:\nProblema real \nTipo de modelo ML \nDatos necesarios \nImpacto real \nRiesgos\n\nTiempo de diseño: 30 min  |  Presentación (elevator pitch): 5 min por grupo"
+        ]
+      ]
+    },
+    {
+      "index": 1,
+      "block_index": 8,
+      "rows": 1,
+      "columns": 2,
+      "data": [
+        [
+          "Integrantes del grupo:\nFeibert Alirio Guzmán Pérez",
+          "Área disciplinar:\nIngeniería de Sistemas / Ciencia de Datos e IA\nProyecto: Academy DATA"
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "block_index": 14,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "1. El problema que quieren resolver."
+        ]
+      ]
+    },
+    {
+      "index": 3,
+      "block_index": 24,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "La creciente ola de datos sin analizar enmarca el presente proyecto con la investigación establecida sobre la toma de decisiones institucionales impulsada por IA en la educación superior, aunque la evidencia sobre la arquitectura multimodelo específica y la integración SNIES es limitada en las fuentes disponibles cabe resaltar que dentro del ecosistema de Datos Abiertos de Colombia y del Sistema Nacional de Información de la Educación Superior (SNIES), la investigación evoluciona desde un enfoque descriptivo hacia un Framework Inteligente de Analítica Predictiva y Prescriptiva.\nEn concordancia, los diferentes paradigmas de Machine Learning para apoyar la toma de decisiones estratégicas en las Instituciones de Educación Superior (IES). De esta manera, se busca defender la democratización de la educación y promover la transparencia en la gestión de la información, aspectos que impulsan una transformación en los procesos de investigación, docencia, extensión y aseguramiento de la calidad. Asimismo, favorece la adopción de procesos analíticos orientados a optimizar el constructo de pertinencia al interior de los claustros académicos, en concordancia con la necesidad de tomar decisiones oportunas y fundamentadas en evidencia.\nDe igual manera, facilita el diseño de estrategias curriculares sustentadas en datos, optimizando la gestión institucional y potenciando la capacidad de acción de los analistas de datos mediante herramientas de Machine Learning, procesamiento de lenguaje natural (NLP) y modelamiento analítico. Estas tecnologías permiten transformar grandes volúmenes de datos en conocimiento útil para incrementar la eficiencia operativa, fortalecer la toma de decisiones y contribuir al mejoramiento continuo de las Instituciones de Educación Superior. De esta manera Cardona & Arbelaez (2019), validan la evolución desde enfoques descriptivos (Análisis de Aprendizaje) a enfoques predictivos (Minería de Datos Educativas) para la mejora continua.\nPara la predicción específica de la retención de estudiantes, Alamo, (2024), confirma que la IA y el aprendizaje automático identifican eficazmente patrones en grandes conjuntos de datos para gestionar la deserción estudiantil mediante intervenciones personalizadas.  Zambrano et al., (2026) demuestran la capacidad de la IA para optimizar automáticamente el diseño curricular, apoyando el objetivo del marco de fortalecer la relevancia curricular.\nSin embargo, las fuentes no abordan explícitamente la arquitectura supervisada/no supervisada multimodelo ni la integración específica de SNIES. La evidencia apoya el enfoque general, pero carece de documentación sobre la implementación técnica de este marco en particular.\n"
+        ]
+      ]
+    },
+    {
+      "index": 4,
+      "block_index": 27,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "El Ministerio de Educación Nacional (MEN) de Colombia, a través del Decreto 1330 de 2019 y las resoluciones subsiguientes, exige a las IES una rigurosa fundamentación estadística, teórica y de contexto para la obtención o renovación del Registro Calificado mediante el \"Documento Maestro\". Tradicionalmente, la construcción de los capítulos de Justificación del Programa, Pertinencia Social y Académica y Estrategias de Retención se realiza mediante procesos artesanales de consulta, descarga de archivos planos (CSV/Excel) y análisis estáticos que carecen de dinamismo y capacidad predictiva.\nParalelamente, el Estado colombiano ha avanzado en la política de Gobierno Digital, disponibilizando las bases de datos del SNIES y el portal institucional de Datos Abiertos mediante arquitecturas de API REST (Socrata). A pesar de la disponibilidad de estos grandes volúmenes de datos (Big Data gubernamental), existe un vacío tecnológico y metodológico en las IES para consumir, procesar, cruzar y modelar estadísticamente estos flujos de información en tiempo real. La ausencia de un pipeline de datos automatizado impide realizar análisis de analítica prescriptiva y predictiva respecto a cómo las tendencias del entorno externo afectan directamente la retención interna y la vigencia curricular de los programas.\n\n1. Componentes Metodológicos Identificados (Línea de Base)\nUnidad de Análisis: El programa académico de educación superior en Colombia (comparado sectorialmente frente a su núcleo básico de conocimiento - NBC o área de conocimiento del SNIES).\nVariables Independientes ($X_n$): * Dimensión Sectorial (SNIES): Matrícula histórica, tasas de deserción agregadas por metodología (presencial/virtual), origen geográfico, y caracterización de la planta docente del sector.\nDimensión Socioeconómica y Laboral (Datos Abiertos): Índices de empleabilidad por área, salarios de enganche del Observatorio Laboral para la Educación (OLE), y variables macroeconómicas regionales (PIB departamental, desempleo).\nContexto de Espacio y Tiempo: Territorio de la República de Colombia; datos históricos consolidados en las API gubernamentales (típicamente ventanas de los últimos 5 a 10 años) con proyecciones al horizonte de vigencia del Registro Calificado (7 años).\n\nProblemática Detallada\nEl diseño de un Documento Maestro en las IES colombianas enfrenta una ineficiencia metodológica crítica: la desconexión entre los datos analíticos del sector y la toma de decisiones curriculares. Las universidades procesan de manera aislada sus métricas internas de deserción, ignorando el comportamiento predictivo y prescriptivo de las variables del entorno (como las tasas de deserción de programas homólogos en el SNIES o los cambios en el mercado laboral capturados en Datos Abiertos).\nEste fenómeno genera tres desafíos metodológicos principales:\nVacío de Generalización en Modelos de Deserción: Los modelos analíticos tradicionales de las universidades son endógenos (solo miran al estudiante hacia adentro), lo que impide anticipar la deserción causada por factores exógenos del mercado o por asimetrías de pertinencia frente a la oferta nacional del SNIES.\nObsolescencia del Análisis Curricular: La verificación microcurricular de pertinencia se realiza bajo criterios cualitativos y subjetivos. No existen algoritmos de procesamiento de lenguaje natural (NLP) o de minería de datos que comparen la estructura curricular de una IES con los estándares normativos e históricos del SNIES de forma automatizada.\nCostos de Operación y Barreras de Acceso Técnico: La recopilación manual de evidencias para el aseguramiento de la calidad consume meses de trabajo analítico por parte de los comités curriculares. Al no disponer de una interfaz unificada (un tablero de control predictivo y prescriptivo), las decisiones se toman con datos desactualizados, lo que compromete la rigurosidad científica exigida por los pares académicos del Consejo Nacional de Acreditación (CNA) y de la CONACES.\nEl proyecto de Machine Learning propuesto resuelve esta problemática al transformar datos abiertos crudos y dispersos en un motor de inferencia estadística parametrizado, estandarizando la evidencia técnico-científica necesaria para sustentar la viabilidad de cualquier programa académico en Colombia."
+        ]
+      ]
+    },
+    {
+      "index": 5,
+      "block_index": 30,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "Variable Objetivo (Dependiente $Y$): \n\nTasa de deserción anual/semestral proyectada del programa y el Índice de Pertinencia Curricular (métrica compuesta basada en la brecha entre la oferta académica del SNIES y la demanda socio-laboral reflejada en Datos Abiertos).\n\nVariable objetivo: Tasa_Deserción_Proyectada e Índice_Pertinencia_Curricular.\nTipo: Predicción multisalida (multi-output), compuesta por:\nRegresión para la Tasa_Deserción_Proyectada. \nRegresión (o índice continuo normalizado de 0 a 100) para el Índice_Pertinencia_Curricular. \nVariable 1 (Tasa_Deserción_Proyectada):\nRepresenta el porcentaje estimado de estudiantes que desertarán del programa en el siguiente periodo académico (semestral o anual). \nEl valor objetivo se calcula a partir del histórico de deserción, variables socioeconómicas, rendimiento académico, permanencia estudiantil, indicadores institucionales y variables contextuales provenientes de fuentes oficiales. \nVariable 2 (Índice_Pertinencia_Curricular):\nRepresenta el nivel de alineación entre la oferta académica del programa y las necesidades del entorno productivo y social. \nSe expresa como un índice continuo (0–100), donde valores más altos indican mayor pertinencia. \nEl índice se calcula mediante una métrica compuesta que integra: \nCorrespondencia entre competencias del currículo y perfiles ocupacionales. \nBrecha entre la oferta académica registrada en el SNIES y la demanda laboral identificada en Datos Abiertos. \nTendencias de empleabilidad y sectores económicos prioritarios. \nIndicadores regionales de desarrollo y necesidades del mercado laboral.\n"
+        ]
+      ]
+    },
+    {
+      "index": 6,
+      "block_index": 32,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "Variables Independientes ($X_n$):\nDimensión Académica e Institucional (SNIES): Matrícula histórica por programa y nivel de formación, tasas de deserción y graduación, permanencia estudiantil, número de admitidos, cobertura, metodología (presencial, virtual o híbrida), características del programa, acreditación, cualificación y dedicación de la planta docente, relación estudiante-docente e indicadores de calidad institucional. \nDimensión Socioeconómica y Laboral (Datos Abiertos y OLE): Tasas de empleabilidad por área del conocimiento, salarios de enganche, demanda de ocupaciones, vacantes laborales, indicadores económicos regionales (PIB, desempleo, informalidad), sectores productivos estratégicos, dinámica empresarial y necesidades de talento humano por región. \nDimensión Demográfica y Territorial (DANE y Datos Abiertos): Proyecciones poblacionales, distribución por edad, nivel educativo, migración, urbanización, índices de pobreza, acceso a educación superior y características socioeconómicas de la población en las áreas de influencia de cada institución. \nDimensión Curricular y de Pertinencia: Correspondencia entre competencias del currículo y perfiles ocupacionales, actualización de los planes de estudio, articulación con políticas públicas, alineación con sectores económicos prioritarios, incorporación de competencias digitales y análisis de la brecha entre la oferta académica y la demanda laboral. \nContexto Espacio-Temporal: Territorio de la República de Colombia; integración de información histórica proveniente de SNIES, Observatorio Laboral para la Educación (OLE), DANE y portales de Datos Abiertos, utilizando series temporales consolidadas de los últimos 5 a 10 años para generar predicciones y apoyar la toma de decisiones durante el horizonte de vigencia del Registro Calificado (7 años).\n\nNOTA: identifica claramente las fuentes oficiales (SNIES, OLE, DANE y Datos Abiertos) y contempla tanto factores académicos como socioeconómicos y territoriales que influyen en la deserción estudiantil y la pertinencia curricular."
+        ]
+      ]
+    },
+    {
+      "index": 7,
+      "block_index": 35,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "¿En qué medida la integración y modelado predictivo y prescriptivo de las variables macro-educativas del SNIES y los indicadores socio-laborales de Datos Abiertos Colombia, consolidados en una plataforma analítica en Streamlit, permiten optimizar las proyecciones de deserción/retención y fundamentar la pertinencia micro y macrocurricular requerida en los Documentos Maestros de las Instituciones de Educación Superior?"
+        ]
+      ]
+    },
+    {
+      "index": 8,
+      "block_index": 37,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "El proyecto impacta directamente a las Instituciones de Educación Superior (IES), especialmente a los directivos, oficinas de planeación, analistas de datos, coordinadores y directores de programa, comités curriculares, unidades de aseguramiento de la calidad, investigadores y responsables de los procesos de Registro Calificado y Acreditación. Asimismo, beneficia a docentes y estudiantes al fortalecer las estrategias institucionales de permanencia estudiantil y actualización curricular.\nDe manera indirecta, favorece al Ministerio de Educación Nacional (MEN), al SNIES, al Consejo Nacional de Acreditación (CNA), a CONACES y a los organismos encargados de formular políticas públicas, al proporcionar evidencia analítica derivada de Datos Abiertos para apoyar la toma de decisiones y el seguimiento del sistema de educación superior.\nEl principal aporte del framework consiste en transformar grandes volúmenes de datos abiertos en información estratégica mediante técnicas de Machine Learning supervisado y no supervisado, generando predicciones, segmentaciones y recomendaciones prescriptivas que optimizan la permanencia estudiantil, fortalecen la pertinencia curricular y agilizan la elaboración de Documentos Maestros. Esto permite reducir los tiempos de análisis, incrementar la eficiencia institucional y promover una cultura de decisiones fundamentadas en evidencia.\n"
+        ]
+      ]
+    },
+    {
+      "index": 9,
+      "block_index": 41,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "2. Arquitectura de IA y toma de decisión tecnológica"
+        ]
+      ]
+    },
+    {
+      "index": 10,
+      "block_index": 44,
+      "rows": 1,
+      "columns": 6,
+      "data": [
+        [
+          "[X]",
+          "MODELOS SUPERVISADOS (con datos etiquetados)\nSe empleará para construir modelos predictivos que estimen la Tasa de Deserción Proyectada y el Índice de Pertinencia Curricular, utilizando información histórica proveniente del SNIES, Observatorio Laboral para la Educación (OLE), DANE y el Portal Nacional de Datos Abiertos. Se evaluarán múltiples algoritmos de regresión, clasificación y ensambles mediante AutoML para seleccionar automáticamente el modelo con mejor desempeño.",
+          "[X ]",
+          "NO supervisados (sin target)\nSe utilizan para descubrir patrones ocultos, segmentar programas académicos e Instituciones de Educación Superior con características similares, detectar anomalías y analizar perfiles de riesgo mediante técnicas de clustering y reducción de dimensionalidad. Estos resultados fortalecen el componente de analítica prescriptiva del framework.",
+          "[ ]",
+          "No constituye el enfoque principal del proyecto. Como trabajo futuro podría incorporarse para optimizar estrategias de intervención institucional mediante agentes inteligentes o asistentes basados en Modelos de Lenguaje (LLM) que automaticen la generación de recomendaciones para la formulación de Documentos Maestros."
+        ]
+      ]
+    },
+    {
+      "index": 11,
+      "block_index": 96,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "El framework integra datos estructurados provenientes de fuentes oficiales como SNIES, DANE, Observatorio Laboral para la Educación (OLE) y el Portal Nacional de Datos Abiertos. Entre las variables de entrada se incluyen indicadores académicos, institucionales, socioeconómicos, demográficos, laborales y curriculares relacionados con la permanencia estudiantil y la pertinencia de los programas académicos.\nLas variables objetivo corresponden a la Tasa de Deserción Proyectada y al Índice de Pertinencia Curricular, complementadas con modelos no supervisados que identifican patrones, segmentos y anomalías dentro del ecosistema de educación superior."
+        ]
+      ]
+    },
+    {
+      "index": 12,
+      "block_index": 98,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "El framework transforma grandes volúmenes de Datos Abiertos en inteligencia institucional para apoyar la toma de decisiones estratégicas. Permite predecir el riesgo de deserción, evaluar la pertinencia curricular, identificar grupos de programas con características similares, detectar comportamientos atípicos y generar recomendaciones prescriptivas que fortalezcan la permanencia estudiantil, la actualización curricular y la elaboración de Documentos Maestros requeridos en los procesos de Registro Calificado y Acreditación.\n"
+        ]
+      ]
+    },
+    {
+      "index": 13,
+      "block_index": 100,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          "La combinación de múltiples algoritmos de Machine Learning permite aprovechar las fortalezas de cada paradigma de aprendizaje, incrementando la precisión, robustez e interpretabilidad de los resultados. Los modelos supervisados proporcionan predicciones cuantitativas sobre la deserción y la pertinencia curricular, mientras que los modelos no supervisados descubren patrones ocultos y segmentan programas académicos con comportamientos similares. Finalmente, la integración de ambos enfoques posibilita la construcción de un sistema de analítica prescriptiva que recomienda acciones basadas en evidencia para optimizar la gestión académica y apoyar la toma de decisiones en las Instituciones de Educación Superior.\n"
+        ]
+      ]
+    },
+    {
+      "index": 14,
+      "block_index": 105,
+      "rows": 10,
+      "columns": 4,
+      "data": [
+        [
+          "Fase",
+          "Proceso",
+          "Fuentes / Tecnologías",
+          "Salida Esperada"
+        ],
+        [
+          "1. Captura de Datos",
+          "Consumo automatizado de información mediante API REST y archivos abiertos.",
+          "SNIES, Datos Abiertos Colombia (API Socrata), DANE, Observatorio Laboral para la Educación (OLE).",
+          "Datos académicos, socioeconómicos, laborales, demográficos y territoriales consolidados."
+        ],
+        [
+          "2. Integración (ETL)",
+          "Extracción, limpieza, transformación y unificación de múltiples fuentes de datos.",
+          "Python (Pandas, Requests), JSON, CSV, API REST, SoQL (Socrata).",
+          "Dataset maestro integrado y normalizado."
+        ],
+        [
+          "3. Preparación de Datos",
+          "Tratamiento de valores faltantes, eliminación de duplicados, detección de valores atípicos, codificación de variables categóricas, normalización e ingeniería de características (Feature Engineering).",
+          "Scikit-learn, NumPy, Pandas.",
+          "Datos listos para el entrenamiento de modelos de Machine Learning."
+        ],
+        [
+          "4. Analítica Supervisada",
+          "Comparación automática de algoritmos de clasificación y regresión mediante AutoML para predecir la deserción y estimar el Índice de Pertinencia Curricular.",
+          "PyCaret, FLAML, Random Forest, XGBoost, LightGBM, CatBoost, Extra Trees, Redes Neuronales, SVM, entre otros.",
+          "Modelo óptimo seleccionado con base en métricas de desempeño."
+        ],
+        [
+          "5. Analítica No Supervisada",
+          "Descubrimiento de patrones, segmentación de programas académicos, agrupación de IES y detección de anomalías.",
+          "K-Means, DBSCAN, HDBSCAN, PCA, UMAP, t-SNE, Gaussian Mixture Models, Isolation Forest.",
+          "Clústeres, perfiles institucionales y patrones ocultos para apoyar la toma de decisiones."
+        ],
+        [
+          "6. Selección Automática del Modelo",
+          "Evaluación comparativa mediante validación cruzada y optimización de hiperparámetros para seleccionar el mejor algoritmo.",
+          "PyCaret, FLAML, Cross Validation, Grid Search, Bayesian Optimization.",
+          "Modelo final con el mayor desempeño predictivo e interpretabilidad."
+        ],
+        [
+          "7. Analítica Predictiva",
+          "Proyección de indicadores institucionales.",
+          "Modelo seleccionado.",
+          "Predicción de la Tasa de Deserción Proyectada y del Índice de Pertinencia Curricular."
+        ],
+        [
+          "8. Analítica Prescriptiva",
+          "Generación automática de recomendaciones basadas en los resultados predictivos y los patrones descubiertos.",
+          "Motor de reglas de negocio + resultados de Machine Learning.",
+          "Estrategias para fortalecer la permanencia estudiantil, actualizar microcurrículos, priorizar programas en riesgo y apoyar la elaboración de Documentos Maestros."
+        ],
+        [
+          "9. Visualización y Toma de Decisiones",
+          "Publicación de dashboards interactivos y reportes ejecutivos para usuarios institucionales.",
+          "Streamlit, Plotly, Power BI (opcional).",
+          "Plataforma inteligente para el análisis, monitoreo y apoyo a la toma de decisiones basada en evidencia."
+        ]
+      ]
+    },
+    {
+      "index": 15,
+      "block_index": 108,
+      "rows": 6,
+      "columns": 3,
+      "data": [
+        [
+          "Entidad",
+          "Información",
+          "Acceso"
+        ],
+        [
+          "SNIES",
+          "Programas académicos, matrícula, graduación, permanencia, deserción, cobertura e indicadores institucionales.",
+          "https://snies.mineducacion.gov.co"
+        ],
+        [
+          "Datos Abiertos Colombia",
+          "Conjuntos de datos de educación, economía, empleo, territorio y desarrollo regional mediante API Socrata.",
+          "https://www.datos.gov.co"
+        ],
+        [
+          "API Socrata",
+          "Consumo de datasets en formatos JSON, CSV y consultas mediante SoQL.",
+          "https://dev.socrata.com"
+        ],
+        [
+          "DANE",
+          "Indicadores demográficos, sociales, económicos y territoriales.",
+          "https://www.dane.gov.co"
+        ],
+        [
+          "Observatorio Laboral para la Educación (OLE)",
+          "Empleabilidad, salarios de enganche e inserción laboral de graduados.",
+          "https://ole.mineducacion.gov.co"
+        ]
+      ]
+    },
+    {
+      "index": 16,
+      "block_index": 113,
+      "rows": 7,
+      "columns": 2,
+      "data": [
+        [
+          "¿Qué tipo de datos necesitarían?",
+          "¿De dónde los obtendrían?"
+        ],
+        [
+          "Datos académicos: matrícula, permanencia, deserción, graduación, cobertura, programas académicos, modalidad, nivel de formación, acreditación, Registro Calificado, Núcleos Básicos del Conocimiento (NBC), características institucionales y planta docente.",
+          "SNIES (Sistema Nacional de Información de la Educación Superior) https://snies.mineducacion.gov.co"
+        ],
+        [
+          "Datos laborales: empleabilidad de graduados, salarios de enganche, inserción laboral, demanda ocupacional y sectores productivos.",
+          "Observatorio Laboral para la Educación (OLE) https://ole.mineducacion.gov.co"
+        ],
+        [
+          "Datos demográficos y socioeconómicos: población, proyecciones demográficas, pobreza multidimensional, desempleo, informalidad, PIB regional, indicadores sociales y económicos.",
+          "DANE https://www.dane.gov.co"
+        ],
+        [
+          "Datos abiertos gubernamentales: educación, economía, empleo, territorio, indicadores regionales, desarrollo social y variables complementarias para enriquecer los modelos.",
+          "Portal Nacional de Datos Abiertos https://www.datos.gov.co"
+        ],
+        [
+          "Datos geográficos: ubicación de Instituciones de Educación Superior, municipios, departamentos y regiones para análisis espacial.",
+          "Datos Abiertos Colombia, DANE y servicios cartográficos abiertos (GeoJSON)."
+        ],
+        [
+          "Dataset integrado del proyecto: consolidación automática de todas las fuentes oficiales mediante procesos ETL, generando un repositorio estructurado para entrenamiento y validación de modelos.",
+          "Framework desarrollado en Python mediante consumo de APIs REST y archivos CSV/JSON provenientes de las fuentes oficiales."
+        ]
+      ]
+    },
+    {
+      "index": 17,
+      "block_index": 138,
+      "rows": 6,
+      "columns": 3,
+      "data": [
+        [
+          "Fuente",
+          "Tipo de información",
+          "Acceso"
+        ],
+        [
+          "SNIES",
+          "Matrícula, permanencia, graduación, deserción, programas académicos, IES y calidad.",
+          "https://snies.mineducacion.gov.co"
+        ],
+        [
+          "Datos Abiertos Colombia",
+          "Educación, economía, empleo, territorio y desarrollo regional mediante API Socrata.",
+          "https://www.datos.gov.co"
+        ],
+        [
+          "API Socrata",
+          "Consumo automatizado de datasets en formatos JSON, CSV y consultas SoQL.",
+          "https://dev.socrata.com"
+        ],
+        [
+          "DANE",
+          "Indicadores demográficos, económicos y territoriales.",
+          "https://www.dane.gov.co"
+        ],
+        [
+          "OLE",
+          "Empleabilidad, salarios e inserción laboral de graduados.",
+          "https://ole.mineducacion.gov.co"
+        ]
+      ]
+    },
+    {
+      "index": 18,
+      "block_index": 190,
+      "rows": 5,
+      "columns": 5,
+      "data": [
+        [
+          "Factor",
+          "Fortalezas (Interno +)",
+          "Oportunidades (Externo +)",
+          "Debilidades (Interno -)",
+          "Amenazas (Externo -)"
+        ],
+        [
+          "Calidad de los datos",
+          "Integración de múltiples fuentes oficiales (SNIES, DANE, OLE y Datos Abiertos), lo que mejora la confiabilidad y representatividad de la información utilizada para el entrenamiento de los modelos.",
+          "Incorporar nuevas fuentes de Datos Abiertos y actualizar automáticamente la información mediante APIs para mejorar continuamente la precisión del framework.",
+          "Diferencias en la estructura, periodicidad y calidad de los datos provenientes de distintas entidades pueden requerir procesos adicionales de depuración y homologación.",
+          "Cambios en la disponibilidad, actualización o estructura de los conjuntos de datos oficiales pueden afectar la continuidad y reproducibilidad de los modelos."
+        ],
+        [
+          "Acceso a la información",
+          "Disponibilidad de datos públicos y reutilizables que facilitan el desarrollo de soluciones basadas en evidencia para las Instituciones de Educación Superior.",
+          "Fortalecer la interoperabilidad entre plataformas gubernamentales mediante servicios API y promover una cultura de datos abiertos para la transformación digital de las IES.",
+          "Algunas fuentes presentan limitaciones de acceso, diferencias en los formatos o restricciones de consulta que pueden afectar la automatización del proceso ETL.",
+          "Cambios en las políticas de acceso, límites de consumo de APIs o indisponibilidad temporal de los servicios podrían afectar el funcionamiento del framework."
+        ],
+        [
+          "Integración de datos",
+          "Arquitectura ETL automatizada que consolida información académica, laboral, demográfica y territorial en un repositorio analítico único.",
+          "Escalar el framework incorporando nuevas fuentes de información como sistemas institucionales, observatorios regionales y plataformas de analítica educativa.",
+          "La heterogeneidad de formatos, catálogos de datos y estructuras semánticas incrementa la complejidad del proceso de integración y transformación.",
+          "Cambios tecnológicos, incompatibilidades entre plataformas o modificaciones en los esquemas de datos pueden afectar la interoperabilidad del sistema."
+        ],
+        [
+          "Sesgo y ética en IA",
+          "Utilización de múltiples algoritmos de Machine Learning y técnicas de validación cruzada que favorecen modelos más robustos, interpretables y generalizables.",
+          "Incorporar mecanismos de Inteligencia Artificial Explicable (XAI), auditoría algorítmica y monitoreo continuo para fortalecer la transparencia y la confianza en los resultados.",
+          "Posibles sesgos derivados de información histórica, desbalance entre programas académicos o diferencias regionales que pueden influir en las predicciones.",
+          "Decisiones institucionales basadas exclusivamente en modelos automatizados, sin validación por expertos, podrían generar interpretaciones inadecuadas o afectar la equidad en la toma de decisiones."
+        ]
+      ]
+    },
+    {
+      "index": 19,
+      "block_index": 241,
+      "rows": 6,
+      "columns": 4,
+      "data": [
+        [
+          "Marca",
+          "Consideración ética",
+          "¿Cómo lo abordarían?",
+          "¿Aplica?"
+        ],
+        [
+          "[X]",
+          "Privacidad y protección de datos",
+          "El framework utilizará exclusivamente información pública proveniente de Datos Abiertos y fuentes oficiales (SNIES, DANE y OLE). En caso de incorporar información institucional o de estudiantes, se aplicarán procesos de anonimización, minimización de datos y cumplimiento de la normativa colombiana sobre protección de datos personales (Ley 1581 de 2012), garantizando que ninguna predicción permita identificar personas naturales.",
+          "Sí"
+        ],
+        [
+          "[X]",
+          "Sesgo en los datos o poblaciones subrepresentadas",
+          "Se evaluará la representatividad de los datos por región, área del conocimiento, modalidad académica y tipología institucional para evitar sesgos derivados de información histórica o desbalance entre programas académicos. Se implementarán técnicas de validación cruzada, balanceo de datos y comparación de múltiples algoritmos mediante AutoML para reducir sesgos y mejorar la capacidad de generalización del framework.",
+          "Sí"
+        ],
+        [
+          "[X]",
+          "Transparencia y explicabilidad del modelo",
+          "Las predicciones estarán acompañadas por indicadores de confianza y técnicas de Inteligencia Artificial Explicable (XAI), mostrando las variables con mayor influencia en cada recomendación, tales como matrícula, permanencia, empleabilidad, indicadores socioeconómicos y pertinencia curricular. Esto permitirá comprender cómo el modelo llega a sus resultados y fortalecerá la confianza de los usuarios.",
+          "Sí"
+        ],
+        [
+          "[X]",
+          "Riesgo de estigmatización institucional",
+          "El sistema evitará clasificar instituciones o programas académicos como \"buenos\" o \"malos\". Los resultados serán presentados como indicadores de apoyo para la toma de decisiones, identificando oportunidades de mejora y recomendaciones prescriptivas sin generar juicios de valor que puedan afectar la reputación institucional.",
+          "Sí"
+        ],
+        [
+          "[X]",
+          "Supervisión humana y toma de decisiones",
+          "El framework funcionará como un sistema de apoyo a la decisión. Las recomendaciones generadas por los modelos deberán ser interpretadas y validadas por directivos, analistas institucionales, comités curriculares y responsables del aseguramiento de la calidad antes de definir acciones estratégicas. La decisión final siempre será responsabilidad del talento humano.",
+          "Sí"
+        ]
+      ]
+    },
+    {
+      "index": 20,
+      "block_index": 266,
+      "rows": 6,
+      "columns": 5,
+      "data": [
+        [
+          "Criterio",
+          "Excelente (3 pts)",
+          "Bueno (2 pts)",
+          "En desarrollo (1 pt)",
+          "Ptos"
+        ],
+        [
+          "1. Pertinencia del problema",
+          "El problema es real, especifico y claramente relevante para la educación",
+          "El problema es relevante, pero algo vago o general",
+          "El problema no está claramente definido o no es educativo",
+          "/ 3"
+        ],
+        [
+          "2. Justificación técnica",
+          "Explican correctamente por que esa arquitectura es la adecuada para ese tipo de datos",
+          "Mencionan la arquitectura correcta pero la justificación es superficial",
+          "La arquitectura elegida no corresponde al problema o no hay justificación",
+          "/ 3"
+        ],
+        [
+          "3. Consideración ética",
+          "Identifican al menos dos riesgos concretos y proponen medidas específicas para mitigarlos",
+          "Identifican un riesgo, pero la propuesta de mitigación es genérica",
+          "No identifican riesgos éticos o la reflexión es muy superficial",
+          "/ 2"
+        ],
+        [
+          "4. Enlace a GitHub",
+          "Carga exitosa. ",
+          "Carga parcial",
+          "Carga semi-parcial ",
+          "/ 2"
+        ],
+        [
+          "TOTAL:",
+          "TOTAL:",
+          "TOTAL:",
+          "TOTAL:",
+          "/ 10"
+        ]
+      ]
+    },
+    {
+      "index": 21,
+      "block_index": 272,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 22,
+      "block_index": 276,
+      "rows": 1,
+      "columns": 1,
+      "data": [
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 23,
+      "block_index": 296,
+      "rows": 10,
+      "columns": 4,
+      "data": [
+        [
+          "Nombre del dataset",
+          "Descripción",
+          "Variables principales",
+          "Enlace"
+        ],
+        [
+          "SNIES - Bases consolidadas",
+          "Base oficial del SNIES con información histórica de estudiantes, docentes, administrativos e instituciones de educación superior en Colombia. snies.mineducacion+1",
+          "Código SNIES, institución, programa, estudiante, docente, periodo, municipio, estado académico, matrícula, graduación, deserción. snies.mineducacion+1",
+          "Bases consolidadas - SNIES snies.mineducacion"
+        ],
+        [
+          "SNIES - Estadísticas",
+          "Portal de estadísticas con acceso a consultas e informes sobre educación superior en Colombia. snies.mineducacion+1",
+          "Indicadores de cobertura, matrícula, programas, instituciones, perfiles territoriales y series históricas. snies.mineducacion+1",
+          "ESTADÍSTICAS - SNIES snies.mineducacion"
+        ],
+        [
+          "SNIES - Portal principal",
+          "Portal institucional del SNIES con acceso a consulta de programas, estadísticas, mapas, tableros y datos abiertos. snies.mineducacion",
+          "Oferta académica, tableros, mapas, reportes, datos abiertos. snies.mineducacion",
+          "SNIES - Ministerio de Educación Nacional snies.mineducacion"
+        ],
+        [
+          "Datos Abiertos Colombia - CSV recurso 1",
+          "Archivo CSV público de Datos Abiertos Colombia útil para variables socio-laborales o administrativas. datos.gov",
+          "Depende del recurso; típicamente municipio, año, indicador, valor, sector. datos.gov",
+          "CSV recurso datos.gov"
+        ],
+        [
+          "Datos Abiertos Colombia - CSV recurso 2",
+          "Archivo CSV descargable de Datos Abiertos Colombia para enriquecer variables contextuales. datos.gov",
+          "Depende del conjunto; puede incluir territorio, periodo, indicador, valor. datos.gov",
+          "CSV descarga datos.gov"
+        ],
+        [
+          "Datos Abiertos Colombia - CSV recurso 3",
+          "Otro archivo CSV público de Datos Abiertos Colombia. datos.gov",
+          "Depende del conjunto; útil para cruces contextuales y socioeconómicos. datos.gov",
+          "CSV descarga datos.gov"
+        ],
+        [
+          "Oferta Programa Académico Colombia SNIES - Kaggle",
+          "Dataset de Kaggle con oferta académica colombiana basada en SNIES; sirve para exploración rápida y prototipos. kaggle",
+          "Código SNIES, programa, institución, nivel, modalidad, ubicación, periodo. kaggle",
+          "Kaggle - Oferta Programa Académico Colombia SNIES kaggle"
+        ],
+        [
+          "Predict students' dropout and academic success - Kaggle",
+          "Dataset de educación superior para predecir deserción y éxito académico, útil como benchmark. kaggle",
+          "Factores sociales, económicos, académicos, rendimiento, etiqueta dropout/success. kaggle",
+          "Kaggle - Predict students' dropout and academic success kaggle"
+        ],
+        [
+          "Kaggle - Datasets",
+          "Buscador general de datasets en Kaggle para educación y analítica predictiva. kaggle+1",
+          "Miles de datasets con filtros por tema, formato y popularidad. kaggle+1",
+          "Kaggle Datasets "
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "part": "/word/media/image2.jpeg",
+      "size": 17847
+    },
+    {
+      "part": "/word/media/image3.png",
+      "size": 1337192
+    },
+    {
+      "part": "/word/media/image1.png",
+      "size": 15586
+    }
+  ],
+  "core_properties": {
+    "title": "",
+    "author": "Un-named",
+    "subject": ""
+  },
+  "paragraph_count": 274,
+  "table_count": 24
+}

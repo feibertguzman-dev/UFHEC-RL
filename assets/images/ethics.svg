@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img">
+<rect width="900" height="520" rx="26" fill="#F7F9FC"/>
+<circle cx="190" cy="260" r="92" fill="#0B1220"/>
+<path d="M190 200 L235 220 V270 C235 305 214 325 190 335 C166 325 145 305 145 270 V220 Z" fill="#22D3EE" opacity="0.9"/>
+<text x="330" y="195" fill="#0B1220" font-family="Arial, sans-serif" font-size="30" font-weight="700">Uso responsable</text>
+<text x="330" y="240" fill="#334155" font-family="Arial, sans-serif" font-size="18">Datos públicos agregados</text>
+<text x="330" y="275" fill="#334155" font-family="Arial, sans-serif" font-size="18">Transparencia de métricas</text>
+<text x="330" y="310" fill="#334155" font-family="Arial, sans-serif" font-size="18">Límites explícitos</text>
+<text x="330" y="345" fill="#334155" font-family="Arial, sans-serif" font-size="18">Supervisión humana</text>
+<text x="330" y="410" fill="#64748B" font-family="Arial, sans-serif" font-size="14">Una predicción no es una decisión.</text>
+</svg>

@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Predicción de Precios de Viviendas con Regresión Lineal | Machine Learning I</title>
+  <meta name="description" content="Proyecto académico que recorre el ciclo completo de un modelo de regresión lineal: exploración de datos, entrenamiento, evaluación e implementación de un simulador interactivo en Streamlit.">
+  <meta name="author" content="Feibert Alirio Guzmán Pérez">
+  <meta name="keywords" content="Machine Learning, Regresión Lineal, California Housing, Streamlit, GitHub Pages, CRISP-ML(Q)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Predicción de Precios de Viviendas con Regresión Lineal">
+  <meta property="og:description" content="Proyecto académico que recorre el ciclo completo de un modelo de regresión lineal: exploración de datos, entrenamiento, evaluación e implementación de un simulador interactivo en Streamlit.">
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/assets/images/og-image.png">
+  <meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPO/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Predicción de Precios de Viviendas con Regresión Lineal">
+  <meta name="twitter:description" content="Proyecto académico que recorre el ciclo completo de un modelo de regresión lineal: exploración de datos, entrenamiento, evaluación e implementación de un simulador interactivo en Streamlit.">
+  <meta name="twitter:image" content="https://TU-USUARIO.github.io/TU-REPO/assets/images/og-image.png">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">⌂</span>
+        <span>
+          Housing Price ML
+          <small>Machine Learning I · UFHEC</small>
+        </span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" data-nav-links>
+          <li><a href="#problema">Problema</a></li>
+          <li><a href="#teoria">Teoría</a></li>
+          <li><a href="#datos">Datos</a></li>
+          <li><a href="#pipeline">Pipeline</a></li>
+          <li><a href="#eda">EDA</a></li>
+          <li><a href="#codigo">Código</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Cambiar tema"></button>
+        <button class="icon-button nav-toggle" type="button" data-nav-toggle aria-label="Abrir menú" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Machine Learning supervisado</span>
+            <h1>Predicción de Precios de Viviendas con Regresión Lineal</h1>
+            <p class="lead">De los datos al despliegue: un caso práctico de Machine Learning supervisado con California Housing</p>
+            <div class="hero-badges" aria-label="Tecnologías del proyecto">
+              <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" alt="Python 3.11" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter Notebook" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/pandas-3.x-150458?logo=pandas&logoColor=white" alt="pandas 3.x" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/NumPy-2.x-013243?logo=numpy&logoColor=white" alt="NumPy 2.x" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/scikit-learn-1.9-F7931E?logo=scikitlearn&logoColor=white" alt="scikit-learn 1.9" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/Streamlit-1.66-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit 1.66" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/HTML5-5-E34F26?logo=html5&logoColor=white" alt="HTML5 5" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/CSS3-3-1572B6?logo=css3&logoColor=white" alt="CSS3 3" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=white" alt="JavaScript ES6+" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/GitHub%20Pages-live-222222?logo=githubpages&logoColor=white" alt="GitHub Pages live" loading="lazy" height="22">
+              <img src="https://img.shields.io/badge/Licencia-MIT-22C55E?logo=opensourceinitiative&logoColor=white" alt="Licencia MIT" loading="lazy" height="22">
+            </div>
+            <div class="cta-row">
+              <a class="button button-primary" href="#simulador">Probar el simulador</a>
+              <a class="button button-secondary" href="#codigo">Ver el código</a>
+              <a class="button button-ghost" href="documentation/DOCUMENTACION_TECNICA.md">Documentación técnica</a>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <img src="assets/images/hero.svg" alt="Ilustración del proyecto: vivienda, datos y regresión lineal" width="1200" height="760">
+          </div>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><strong>20,640</strong><span>Registros</span></div>
+          <div class="stat"><strong>8</strong><span>Variables numéricas</span></div>
+          <div class="stat"><strong>0.614</strong><span>R² del modelo</span></div>
+          <div class="stat"><strong>$71,133</strong><span>RMSE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problema">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Contexto</span>
+            <h2>Un problema real, una pregunta clara</h2>
+          </div>
+          <p>El proyecto conecta una necesidad cotidiana con un flujo completo de Machine Learning, sin ocultar los límites de los datos ni del modelo.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card card-accent reveal">
+            <span class="pill">Problema</span>
+            <h3>Estimar el valor de una vivienda</h3>
+            <p>El precio de una vivienda depende de factores físicos, geográficos y socioeconómicos que interactúan entre sí. Estimar ese valor con precisión es difícil para compradores, vendedores, analistas y ciudadanos que no son especialistas en modelos predictivos.</p>
+          </article>
+          <article class="card reveal">
+            <span class="pill">Pregunta de investigación</span>
+            <h3>¿Qué queremos predecir?</h3>
+            <p>¿Cómo predecir el valor mediano de una vivienda en California a partir de variables geográficas, demográficas y socioeconómicas, usando regresión lineal simple y múltiple?</p>
+            <div class="quote" style="margin-top:18px">Variable objetivo: <code>median_house_value</code></div>
+          </article>
+        </div>
+        <div class="grid-3" style="margin-top:18px">
+          <article class="card reveal">
+            <h3>Objetivo general</h3>
+            <p>Desarrollar y desplegar un modelo de regresión lineal que estime el valor mediano de una vivienda y lo ponga a disposición mediante una landing page y un simulador interactivo en Streamlit.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Objetivo específico 1</h3>
+            <p>Comprender el problema y el diccionario de variables del dataset California Housing.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Objetivo específico 2</h3>
+            <p>Realizar análisis exploratorio, limpieza e imputación de valores faltantes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="teoria" class="section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Marco teórico</span>
+            <h2>La regresión lineal, explicada</h2>
+          </div>
+          <p>Un modelo supervisado que aprende una relación lineal y permite interpretar el peso de cada variable.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Regresión simple</h3>
+            <p>La regresión simple usa una sola variable independiente: y = β0 + β1x. En este proyecto se utiliza median_income para estimar median_house_value.</p>
+            <div class="quote" style="margin-top:16px"><code>y = β0 + β1x</code></div>
+          </article>
+          <article class="card reveal">
+            <h3>Regresión múltiple</h3>
+            <p>La regresión múltiple usa varias variables: y = β0 + β1x1 + ... + βnxn. Permite controlar el efecto conjunto de ubicación, edad, tamaño y características socioeconómicas.</p>
+            <div class="quote" style="margin-top:16px"><code>y = β0 + β1x1 + … + βnxn</code></div>
+          </article>
+        </div>
+        <div class="grid-4" style="margin-top:18px">
+          <article class="card reveal">
+            <span class="pill pill-amber">MSE</span>
+            <p style="margin-top:12px">Error cuadrático medio. Penaliza con fuerza los errores grandes; cuanto más cercano a 0, mejor.</p>
+          </article>
+          <article class="card reveal">
+            <span class="pill pill-amber">RMSE</span>
+            <p style="margin-top:12px">Raíz del MSE. Se expresa en la misma unidad que la variable objetivo (dólares).</p>
+          </article>
+          <article class="card reveal">
+            <span class="pill pill-amber">MAE</span>
+            <p style="margin-top:12px">Error absoluto medio. Indica cuánto se desvía, en promedio, la predicción del valor real.</p>
+          </article>
+          <article class="card reveal">
+            <span class="pill pill-amber">R²</span>
+            <p style="margin-top:12px">Proporción de la variabilidad del precio explicada por el modelo. Un valor de 0.6139 equivale a 61.39%.</p>
+          </article>
+        </div>
+        <div class="card reveal" style="margin-top:18px">
+          <h3>Supuestos que conviene revisar</h3>
+          <ul>
+            <li>Relación aproximadamente lineal entre las variables.</li>
+            <li>Independencia de los errores y varianza constante.</li>
+            <li>Ausencia de multicolinealidad severa entre predictores.</li>
+            <li>Datos representativos del fenómeno que se quiere predecir.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="datos">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Dataset</span>
+            <h2>California Housing en detalle</h2>
+          </div>
+          <p>U.S. Census Bureau (1990), distribuido por StatLib y disponible en scikit-learn. 20640 registros, 10 columnas y una variable objetivo continua.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr><th>Variable</th><th>Tipo</th><th>Descripción</th><th>Uso</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>longitude</code></td>
+                <td>Numérica continua</td>
+                <td>Longitud geográfica del bloque de viviendas.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>latitude</code></td>
+                <td>Numérica continua</td>
+                <td>Latitud geográfica del bloque de viviendas.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>housing_median_age</code></td>
+                <td>Numérica discreta</td>
+                <td>Edad mediana de las viviendas del bloque.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>total_rooms</code></td>
+                <td>Numérica discreta</td>
+                <td>Total de habitaciones en el bloque.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>total_bedrooms</code></td>
+                <td>Numérica discreta</td>
+                <td>Total de dormitorios en el bloque. Presenta 207 valores nulos.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>population</code></td>
+                <td>Numérica discreta</td>
+                <td>Población del bloque.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>households</code></td>
+                <td>Numérica discreta</td>
+                <td>Número de hogares en el bloque.</td>
+                <td><span class="pill">Feature</span></td>
+              </tr>
+              <tr>
+                <td><code>median_income</code></td>
+                <td>Numérica continua</td>
+                <td>Ingreso mediano de los hogares, expresado en decenas de miles de dólares.</td>
+                <td><span class="pill">Feature principal</span></td>
+              </tr>
+              <tr>
+                <td><code>median_house_value</code></td>
+                <td>Numérica continua</td>
+                <td>Valor mediano de la vivienda. Es la variable objetivo. Está acotada en 500,001 dólares.</td>
+                <td><span class="pill pill-amber">Target</span></td>
+              </tr>
+              <tr>
+                <td><code>ocean_proximity</code></td>
+                <td>Categórica</td>
+                <td>Proximidad al océano. Se excluye del modelo lineal para trabajar solo con variables numéricas.</td>
+                <td><span class="pill">Excluida</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-3" style="margin-top:18px">
+          <article class="card reveal"><span class="pill">Calidad</span><p style="margin-top:12px">207 valores nulos en <code>total_bedrooms</code>, imputados con la mediana.</p></article>
+          <article class="card reveal"><span class="pill">Rango del target</span><p style="margin-top:12px">De $14,999 a $500,001. El máximo está censurado.</p></article>
+          <article class="card reveal"><span class="pill">División</span><p style="margin-top:12px">16512 filas de entrenamiento y 4128 de prueba (80/20).</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Metodología</span>
+            <h2>Pipeline CRISP-ML(Q)</h2>
+          </div>
+          <p>El proyecto sigue una adaptación de CRISP-ML(Q), un marco de trabajo que incorpora la calidad de los datos y del modelo en cada fase del ciclo de vida.</p>
+        </div>
+        <div class="grid-2" style="align-items:start">
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-number">01</div>
+              <div><h3>Comprensión del problema</h3><p>Se define el objetivo, la variable objetivo, las métricas y el alcance académico.</p></div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-number">02</div>
+              <div><h3>Comprensión y preparación de datos</h3><p>Se carga el CSV, se revisan tipos y nulos, se imputa total_bedrooms y se excluye ocean_proximity.</p></div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-number">03</div>
+              <div><h3>Análisis exploratorio</h3><p>Se estudian distribuciones, correlaciones, valores atípicos y patrones geográficos.</p></div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-number">04</div>
+              <div><h3>Modelado</h3><p>Se entrenan regresión simple y múltiple con scikit-learn y una división 80/20.</p></div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-number">05</div>
+              <div><h3>Evaluación</h3><p>Se comparan MSE, RMSE, MAE y R² sobre el conjunto de prueba.</p></div>
+            </article>
+            <article class="timeline-item reveal">
+              <div class="timeline-number">06</div>
+              <div><h3>Despliegue y monitoreo</h3><p>Se publica la landing page y la app Streamlit, dejando documentados los límites y la reproducibilidad.</p></div>
+            </article>
+          </div>
+          <figure class="figure-card reveal" style="margin:0">
+            <img src="assets/images/pipeline.svg" alt="Diagrama del pipeline CRISP-ML(Q) del proyecto" loading="lazy">
+            <figcaption><strong>Arquitectura por capas</strong>Datos, preparación, modelado, evaluación y despliegue.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="eda">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Análisis exploratorio</span>
+            <h2>Qué dicen los datos antes del modelo</h2>
+          </div>
+          <p>El análisis exploratorio permite entender la calidad de los datos, la relación entre variables y los patrones geográficos antes de entrenar el modelo.</p>
+        </div>
+        <div class="figure-grid">
+          <figure class="figure-card reveal">
+            <img src="assets/figures/correlation-heatmap.png" alt="Matriz de correlación: Relaciones lineales entre las variables numéricas del dataset." loading="lazy" data-zoom>
+            <figcaption><strong>Matriz de correlación</strong>Relaciones lineales entre las variables numéricas del dataset.</figcaption>
+          </figure>
+          <figure class="figure-card reveal">
+            <img src="assets/figures/geographic-map.png" alt="Distribución geográfica: Precio mediano por ubicación; el color representa el valor de la vivienda." loading="lazy" data-zoom>
+            <figcaption><strong>Distribución geográfica</strong>Precio mediano por ubicación; el color representa el valor de la vivienda.</figcaption>
+          </figure>
+          <figure class="figure-card reveal">
+            <img src="assets/figures/simple-regression.png" alt="Regresión simple: Relación entre el ingreso mediano y el valor mediano de la vivienda." loading="lazy" data-zoom>
+            <figcaption><strong>Regresión simple</strong>Relación entre el ingreso mediano y el valor mediano de la vivienda.</figcaption>
+          </figure>
+          <figure class="figure-card reveal">
+            <img src="assets/figures/target-distribution.png" alt="Distribución del precio: Histograma de median_house_value y su concentración en el rango medio." loading="lazy" data-zoom>
+            <figcaption><strong>Distribución del precio</strong>Histograma de median_house_value y su concentración en el rango medio.</figcaption>
+          </figure>
+        </div>
+        <div class="card reveal" style="margin-top:18px">
+          <h3>Hallazgos principales</h3>
+          <ul>
+            <li>median_income es la variable con mayor correlación positiva con median_house_value.</li>
+            <li>La ubicación geográfica explica parte importante del precio: la costa y las áreas metropolitanas concentran valores más altos.</li>
+            <li>total_bedrooms tiene 207 valores nulos; se imputan con la mediana para no perder registros.</li>
+            <li>La variable objetivo está acotada en 500,001 dólares, lo que genera un efecto techo en las predicciones.</li>
+            <li>Existen valores atípicos en total_rooms, population y households que deben interpretarse con cautela.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="codigo" class="section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Ejecución</span>
+            <h2>Del notebook al resultado</h2>
+          </div>
+          <p>Cuatro pasos reproducibles: importar, limpiar, entrenar y evaluar. El notebook limpio contiene el flujo completo.</p>
+        </div>
+        <div class="code-tabs">
+          <article class="code-card reveal">
+            <div class="code-head">
+              <div><strong>1. Importar librerías</strong><span>Se cargan las herramientas de datos, visualización y modelado.</span></div>
+              <button class="copy-code" type="button" data-copy="code-1">Copiar</button>
+            </div>
+            <pre><code id="code-1">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+</code></pre>
+          </article>
+          <article class="code-card reveal">
+            <div class="code-head">
+              <div><strong>2. Cargar y limpiar</strong><span>Se lee el CSV, se imputan los nulos de total_bedrooms y se excluye la variable categórica.</span></div>
+              <button class="copy-code" type="button" data-copy="code-2">Copiar</button>
+            </div>
+            <pre><code id="code-2">df = pd.read_csv("housing.csv")
+df_clean = df.copy()
+df_clean["total_bedrooms"] = df_clean["total_bedrooms"].fillna(
+    df_clean["total_bedrooms"].median()
+)
+df_clean = df_clean.drop(columns=["ocean_proximity"])
+</code></pre>
+          </article>
+          <article class="code-card reveal">
+            <div class="code-head">
+              <div><strong>3. Regresión simple</strong><span>Se estima el precio usando únicamente el ingreso mediano.</span></div>
+              <button class="copy-code" type="button" data-copy="code-3">Copiar</button>
+            </div>
+            <pre><code id="code-3">X_simple = df_clean[["median_income"]]
+y = df_clean["median_house_value"]
+modelo_simple = LinearRegression().fit(X_simple, y)
+print(modelo_simple.intercept_, modelo_simple.coef_[0])
+</code></pre>
+          </article>
+          <article class="code-card reveal">
+            <div class="code-head">
+              <div><strong>4. Regresión múltiple y evaluación</strong><span>Se entrenan todas las variables numéricas y se evalúa sobre el 20% de prueba.</span></div>
+              <button class="copy-code" type="button" data-copy="code-4">Copiar</button>
+            </div>
+            <pre><code id="code-4">features = ["longitude", "latitude", "housing_median_age", "total_rooms",
+            "total_bedrooms", "population", "households", "median_income"]
+X = df_clean[features]
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+modelo = LinearRegression().fit(X_train, y_train)
+y_pred = modelo.predict(X_test)
+print("R2:", r2_score(y_test, y_pred))
+</code></pre>
+          </article>
+        </div>
+        <div class="cta-row" style="margin-top:22px">
+          <a class="button button-primary" href="notebooks/Project_RL_clean.ipynb">Abrir notebook limpio</a>
+          <a class="button button-secondary" href="documentation/GUIA_INSTALACION.md">Cómo ejecutarlo en local</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultados">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Resultados</span>
+            <h2>Un modelo interpretable, con límites claros</h2>
+          </div>
+          <p>El modelo múltiple explica el 61.39% de la variabilidad del precio en el conjunto de prueba. El error sigue siendo relevante para decisiones reales.</p>
+        </div>
+        <div class="metrics-row reveal">
+          <div class="metric-card"><small>MSE</small><strong>$5.06 B</strong><span>Error cuadrático medio</span></div>
+          <div class="metric-card"><small>RMSE</small><strong>$71,133</strong><span>Raíz del error cuadrático</span></div>
+          <div class="metric-card"><small>MAE</small><strong>$51,810</strong><span>Error absoluto medio</span></div>
+          <div class="metric-card"><small>R²</small><strong>0.614</strong><span>61.39% de la varianza</span></div>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Regresión simple</h3>
+            <p>Por cada aumento de una unidad en median_income (10,000 dólares de ingreso mediano), el modelo estima un incremento promedio de 41,793.85 dólares en el valor de la vivienda.</p>
+            <div class="quote" style="margin-top:16px"><code>median_house_value = 45,085.58 + 41,793.85 × median_income</code></div>
+          </article>
+          <article class="card reveal">
+            <h3>Regresión múltiple</h3>
+            <p>El modelo múltiple explica aproximadamente el 61.39% de la variabilidad del precio en el conjunto de prueba. El error promedio absoluto es de 51,810.48 dólares y el RMSE de 71,133.17 dólares.</p>
+            <div class="quote" style="margin-top:16px">El modelo múltiple mejora la capacidad explicativa frente a la regresión simple, pero sigue dejando fuera relaciones no lineales y variables categóricas como ocean_proximity.</div>
+          </article>
+        </div>
+        <div class="table-wrap reveal" style="margin-top:18px">
+          <table>
+            <thead><tr><th>Variable</th><th>Coeficiente</th><th>Lectura</th></tr></thead>
+            <tbody>
+              <tr><td><code>median_income</code></td><td>40538.4</td><td>A mayor ingreso mediano, mayor precio esperado.</td></tr>
+              <tr><td><code>longitude</code></td><td>-42632.39</td><td>El signo refleja el efecto geográfico agregado; no debe interpretarse de forma causal aislada.</td></tr>
+              <tr><td><code>latitude</code></td><td>-42450.07</td><td>El signo refleja el efecto geográfico agregado; no debe interpretarse de forma causal aislada.</td></tr>
+              <tr><td><code>housing_median_age</code></td><td>1182.81</td><td>Viviendas más antiguas se asocian, en promedio, con un valor ligeramente mayor en este dataset.</td></tr>
+              <tr><td><code>total_rooms</code></td><td>-8.19</td><td>Efecto marginal pequeño y sensible a la escala del bloque.</td></tr>
+              <tr><td><code>total_bedrooms</code></td><td>116.26</td><td>Efecto marginal positivo después de controlar las demás variables.</td></tr>
+              <tr><td><code>population</code></td><td>-38.49</td><td>Efecto marginal negativo pequeño.</td></tr>
+              <tr><td><code>households</code></td><td>46.34</td><td>Efecto marginal positivo pequeño.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card reveal" style="margin-top:18px">
+          <h3>Limitaciones que debes conocer</h3>
+          <ul>
+            <li>La regresión lineal supone relaciones lineales que no siempre se cumplen.</li>
+            <li>El dataset es agregado por bloque censal y corresponde a 1990; no refleja el mercado actual.</li>
+            <li>El valor máximo está censurado en 500,001 dólares.</li>
+            <li>No se incluyen variables categóricas ni interacciones.</li>
+            <li>Las predicciones son estimaciones académicas, no avalúos profesionales.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulador" class="section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Interacción</span>
+            <h2>Simula una predicción</h2>
+          </div>
+          <p>La calculadora rápida usa la regresión simple. El simulador completo, con las ocho variables, está en Streamlit.</p>
+        </div>
+        <div class="simulator">
+          <div class="calculator reveal">
+            <label for="income-range">Ingreso mediano del bloque (decenas de miles de USD)</label>
+            <input id="income-range" type="range" min="0.5" max="15" step="0.1" value="3.5">
+            <output id="income-value">3.50 × $10,000 = $35,000</output>
+            <div class="result">
+              <small>Valor estimado de la vivienda</small>
+              <strong id="quick-prediction" data-intercept="45085.5767032679" data-coef="41793.849201896286">$0</strong>
+              <small>Estimación académica, no avalúo profesional.</small>
+            </div>
+          </div>
+          <div class="card reveal">
+            <span class="pill">Streamlit</span>
+            <h3>Simulador completo en la nube</h3>
+            <p style="margin-top:12px">La app permite ajustar ingreso, edad, habitaciones, dormitorios, población y hogares. También muestra métricas, EDA y la tabla de coeficientes.</p>
+            <div class="cta-row" style="margin-top:20px">
+              <a class="button button-primary" href="#documentacion">Ver guía de despliegue</a>
+              <a class="button button-secondary" href="app.py">Ver app.py</a>
+            </div>
+            <p class="note">Esta simulación es una estimación académica basada en un modelo lineal entrenado con datos de 1990. No constituye un avalúo ni una recomendación financiera.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="documentacion">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Documentación</span>
+            <h2>Todo lo que necesitas para reproducirlo</h2>
+          </div>
+          <p>Guías para instalar, ejecutar, desplegar y comprender el proyecto sin ser ingeniero.</p>
+        </div>
+        <div class="doc-grid">
+          <a class="doc-card reveal" href="documentation/GUIA_INSTALACION.md"><strong>Guía de instalación</strong><span>Entorno virtual, dependencias y localhost paso a paso.</span></a>
+          <a class="doc-card reveal" href="documentation/DESPLIEGUE.md"><strong>Guía de despliegue</strong><span>GitHub Pages y Streamlit Cloud con puertas manuales.</span></a>
+          <a class="doc-card reveal" href="documentation/DOCUMENTACION_TECNICA.md"><strong>Documentación técnica</strong><span>Datos, pipeline, modelo, métricas y límites.</span></a>
+          <a class="doc-card reveal" href="documentation/GUIA_DOCENTE.md"><strong>Guía docente</strong><span>Cómo usar el proyecto en clase y qué evaluar.</span></a>
+          <a class="doc-card reveal" href="documentation/FUENTES_Y_DATOS.md"><strong>Fuentes y datos</strong><span>Origen, diccionario y consideraciones éticas.</span></a>
+          <a class="doc-card reveal" href="documentation/Material_1_Proyecto_ML_UFHEC.docx"><strong>Documento Word</strong><span>Plantilla reescrita con la información del proyecto.</span></a>
+        </div>
+        <div class="card reveal" style="margin-top:18px">
+          <h3>Ética y uso responsable</h3>
+          <p>El proyecto usa datos públicos agregados y documenta sus límites. No clasifica personas ni comunidades. Las predicciones son de apoyo y requieren supervisión humana.</p>
+          <div class="quote" style="margin-top:16px">Una predicción no es una decisión. Un modelo no sustituye el juicio profesional.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="referencias" class="section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Referencias</span>
+            <h2>Fuentes y lecturas</h2>
+          </div>
+        </div>
+        <ul class="refs reveal">
+          <li>Pace, R. K., & Barry, R. (1997). Sparse spatial autoregressions. Statistics & Probability Letters, 33(3), 291-297.</li>
+          <li>Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830.</li>
+          <li>scikit-learn Developers. California housing dataset. https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset</li>
+          <li>Streamlit. Streamlit documentation. https://docs.streamlit.io</li>
+          <li>Studer, S. et al. (2021). Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology. Machine Learning and Knowledge Extraction, 3(2), 392-413.</li>
+          <li>McKinney, W. (2010). Data Structures for Statistical Computing in Python. Proceedings of the 9th Python in Science Conference.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>Feibert Alirio Guzmán Pérez</strong><br>Machine Learning I · UFHEC · <span data-year>2026</span></div>
+      <div>Licencia MIT · <a href="https://github.com/TU-USUARIO/TU-REPO">Repositorio</a> · <a href="#inicio">Volver arriba</a></div>
+    </div>
+  </footer>
+
+  <div class="lightbox" data-lightbox aria-hidden="true">
+    <button class="icon-button" type="button" data-lightbox-close aria-label="Cerrar imagen">×</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+project:
+  title: "Predicción de Precios de Viviendas con Regresión Lineal"
+  short_title: "Housing Price ML"
+  subtitle: "De los datos al despliegue: un caso práctico de Machine Learning supervisado con California Housing"
+  author: "Feibert Alirio Guzmán Pérez"
+  role: "Docente e investigador"
+  course: "Machine Learning I"
+  institution: "UFHEC"
+  date: "2026-10-28"
+  license: "MIT"
+  repo_url: "https://github.com/TU-USUARIO/TU-REPO"
+  pages_url: "https://TU-USUARIO.github.io/TU-REPO/"
+  streamlit_url: ""
+  description: "Proyecto académico que recorre el ciclo completo de un modelo de regresión lineal: exploración de datos, entrenamiento, evaluación e implementación de un simulador interactivo en Streamlit."
+  keywords:
+    - Machine Learning
+    - Regresión Lineal
+    - California Housing
+    - Streamlit
+    - GitHub Pages
+    - CRISP-ML(Q)
+  palette:
+    ink: "#0B1220"
+    ink_soft: "#111C31"
+    surface: "#F7F9FC"
+    white: "#FFFFFF"
+    cyan: "#22D3EE"
+    teal: "#14B8A6"
+    amber: "#F59E0B"
+    coral: "#FB7185"
+    slate: "#64748B"
+    line: "#DCE4EF"
+  technologies:
+    - "Python"
+    - "Jupyter Notebook"
+    - "pandas"
+    - "NumPy"
+    - "scikit-learn"
+    - "Matplotlib"
+    - "Seaborn"
+    - "Streamlit"
+    - "HTML5"
+    - "CSS3"
+    - "JavaScript"
+    - "GitHub Pages"
+  badges:
+    - label: "Python"
+      value: "3.11"
+      color: "3776AB"
+      logo: "python"
+    - label: "Jupyter"
+      value: "Notebook"
+      color: "F37626"
+      logo: "jupyter"
+    - label: "pandas"
+      value: "3.x"
+      color: "150458"
+      logo: "pandas"
+    - label: "NumPy"
+      value: "2.x"
+      color: "013243"
+      logo: "numpy"
+    - label: "scikit-learn"
+      value: "1.9"
+      color: "F7931E"
+      logo: "scikitlearn"
+    - label: "Streamlit"
+      value: "1.66"
+      color: "FF4B4B"
+      logo: "streamlit"
+    - label: "HTML5"
+      value: "5"
+      color: "E34F26"
+      logo: "html5"
+    - label: "CSS3"
+      value: "3"
+      color: "1572B6"
+      logo: "css3"
+    - label: "JavaScript"
+      value: "ES6+"
+      color: "F7DF1E"
+      logo: "javascript"
+    - label: "GitHub Pages"
+      value: "live"
+      color: "222222"
+      logo: "githubpages"
+    - label: "Licencia"
+      value: "MIT"
+      color: "22C55E"
+      logo: "opensourceinitiative"
+
+dataset:
+  name: "California Housing"
+  file: "housing.csv"
+  source: "U.S. Census Bureau (1990), distribuido por StatLib y disponible en scikit-learn"
+  source_url: "https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset"
+  license: "Uso académico y educativo; datos públicos agregados"
+  rows: 20640
+  columns_count: 10
+  target: "median_house_value"
+  features:
+    - "longitude"
+    - "latitude"
+    - "housing_median_age"
+    - "total_rooms"
+    - "total_bedrooms"
+    - "population"
+    - "households"
+    - "median_income"
+  categorical:
+    - "ocean_proximity"
+  missing_total: 207
+  missing_column: "total_bedrooms"
+  rows_train: 16512
+  rows_test: 4128
+  target_stats:
+    min: 14999.0
+    max: 500001.0
+    mean: 206855.82
+    median: 179700.0
+  ranges:
+    longitude: [-124.35, -114.31, -118.49]
+    latitude: [32.54, 41.95, 34.26]
+    housing_median_age: [1.0, 52.0, 29.0]
+    total_rooms: [2.0, 39320.0, 2127.0]
+    total_bedrooms: [1.0, 6445.0, 435.0]
+    population: [3.0, 35682.0, 1166.0]
+    households: [1.0, 6082.0, 409.0]
+    median_income: [0.4999, 15.0001, 3.5348]
+  variables:
+    - name: "longitude"
+      type: "Numérica continua"
+      description: "Longitud geográfica del bloque de viviendas."
+      role: "Feature"
+    - name: "latitude"
+      type: "Numérica continua"
+      description: "Latitud geográfica del bloque de viviendas."
+      role: "Feature"
+    - name: "housing_median_age"
+      type: "Numérica discreta"
+      description: "Edad mediana de las viviendas del bloque."
+      role: "Feature"
+    - name: "total_rooms"
+      type: "Numérica discreta"
+      description: "Total de habitaciones en el bloque."
+      role: "Feature"
+    - name: "total_bedrooms"
+      type: "Numérica discreta"
+      description: "Total de dormitorios en el bloque. Presenta 207 valores nulos."
+      role: "Feature"
+    - name: "population"
+      type: "Numérica discreta"
+      description: "Población del bloque."
+      role: "Feature"
+    - name: "households"
+      type: "Numérica discreta"
+      description: "Número de hogares en el bloque."
+      role: "Feature"
+    - name: "median_income"
+      type: "Numérica continua"
+      description: "Ingreso mediano de los hogares, expresado en decenas de miles de dólares."
+      role: "Feature principal"
+    - name: "median_house_value"
+      type: "Numérica continua"
+      description: "Valor mediano de la vivienda. Es la variable objetivo. Está acotada en 500,001 dólares."
+      role: "Target"
+    - name: "ocean_proximity"
+      type: "Categórica"
+      description: "Proximidad al océano. Se excluye del modelo lineal para trabajar solo con variables numéricas."
+      role: "Excluida"
+  notes: "Los datos son agregados por bloque censal, no por vivienda individual. El valor máximo está censurado en 500,001 dólares, lo que limita las predicciones en la zona alta del mercado."
+
+problem:
+  context: "El precio de una vivienda depende de factores físicos, geográficos y socioeconómicos que interactúan entre sí. Estimar ese valor con precisión es difícil para compradores, vendedores, analistas y ciudadanos que no son especialistas en modelos predictivos."
+  question: "¿Cómo predecir el valor mediano de una vivienda en California a partir de variables geográficas, demográficas y socioeconómicas, usando regresión lineal simple y múltiple?"
+  objective_general: "Desarrollar y desplegar un modelo de regresión lineal que estime el valor mediano de una vivienda y lo ponga a disposición mediante una landing page y un simulador interactivo en Streamlit."
+  objectives:
+    - "Comprender el problema y el diccionario de variables del dataset California Housing."
+    - "Realizar análisis exploratorio, limpieza e imputación de valores faltantes."
+    - "Entrenar un modelo de regresión lineal simple usando median_income."
+    - "Entrenar un modelo de regresión lineal múltiple con las variables numéricas disponibles."
+    - "Evaluar los modelos con MSE, RMSE, MAE y R²."
+    - "Publicar una landing page documental y una aplicación Streamlit para simular predicciones."
+  impact:
+    - "Docentes y estudiantes que necesitan un ejemplo completo y reproducible de Machine Learning."
+    - "Analistas que buscan interpretar el efecto de variables socioeconómicas sobre el precio."
+    - "Ciudadanos que requieren una estimación orientativa y transparente."
+  scope: "El proyecto es académico y exploratorio. No sustituye un avalúo profesional ni una decisión financiera."
+
+theory:
+  intro: "La regresión lineal es un algoritmo supervisado que aprende una relación lineal entre una o varias variables de entrada y una variable continua de salida. El modelo busca la recta o hiperplano que minimiza la suma de errores al cuadrado."
+  simple: "La regresión simple usa una sola variable independiente: y = β0 + β1x. En este proyecto se utiliza median_income para estimar median_house_value."
+  multiple: "La regresión múltiple usa varias variables: y = β0 + β1x1 + ... + βnxn. Permite controlar el efecto conjunto de ubicación, edad, tamaño y características socioeconómicas."
+  metrics:
+    - name: "MSE"
+      description: "Error cuadrático medio. Penaliza con fuerza los errores grandes; cuanto más cercano a 0, mejor."
+    - name: "RMSE"
+      description: "Raíz del MSE. Se expresa en la misma unidad que la variable objetivo (dólares)."
+    - name: "MAE"
+      description: "Error absoluto medio. Indica cuánto se desvía, en promedio, la predicción del valor real."
+    - name: "R²"
+      description: "Proporción de la variabilidad del precio explicada por el modelo. Un valor de 0.6139 equivale a 61.39%."
+  assumptions:
+    - "Relación aproximadamente lineal entre las variables."
+    - "Independencia de los errores y varianza constante."
+    - "Ausencia de multicolinealidad severa entre predictores."
+    - "Datos representativos del fenómeno que se quiere predecir."
+
+methodology:
+  framework: "CRISP-ML(Q)"
+  intro: "El proyecto sigue una adaptación de CRISP-ML(Q), un marco de trabajo que incorpora la calidad de los datos y del modelo en cada fase del ciclo de vida."
+  phases:
+    - number: "01"
+      name: "Comprensión del problema"
+      detail: "Se define el objetivo, la variable objetivo, las métricas y el alcance académico."
+    - number: "02"
+      name: "Comprensión y preparación de datos"
+      detail: "Se carga el CSV, se revisan tipos y nulos, se imputa total_bedrooms y se excluye ocean_proximity."
+    - number: "03"
+      name: "Análisis exploratorio"
+      detail: "Se estudian distribuciones, correlaciones, valores atípicos y patrones geográficos."
+    - number: "04"
+      name: "Modelado"
+      detail: "Se entrenan regresión simple y múltiple con scikit-learn y una división 80/20."
+    - number: "05"
+      name: "Evaluación"
+      detail: "Se comparan MSE, RMSE, MAE y R² sobre el conjunto de prueba."
+    - number: "06"
+      name: "Despliegue y monitoreo"
+      detail: "Se publica la landing page y la app Streamlit, dejando documentados los límites y la reproducibilidad."
+
+eda:
+  intro: "El análisis exploratorio permite entender la calidad de los datos, la relación entre variables y los patrones geográficos antes de entrenar el modelo."
+  insights:
+    - "median_income es la variable con mayor correlación positiva con median_house_value."
+    - "La ubicación geográfica explica parte importante del precio: la costa y las áreas metropolitanas concentran valores más altos."
+    - "total_bedrooms tiene 207 valores nulos; se imputan con la mediana para no perder registros."
+    - "La variable objetivo está acotada en 500,001 dólares, lo que genera un efecto techo en las predicciones."
+    - "Existen valores atípicos en total_rooms, population y households que deben interpretarse con cautela."
+  figures:
+    - file: "correlation-heatmap.png"
+      title: "Matriz de correlación"
+      caption: "Relaciones lineales entre las variables numéricas del dataset."
+    - file: "geographic-map.png"
+      title: "Distribución geográfica"
+      caption: "Precio mediano por ubicación; el color representa el valor de la vivienda."
+    - file: "simple-regression.png"
+      title: "Regresión simple"
+      caption: "Relación entre el ingreso mediano y el valor mediano de la vivienda."
+    - file: "target-distribution.png"
+      title: "Distribución del precio"
+      caption: "Histograma de median_house_value y su concentración en el rango medio."
+
+models:
+  simple:
+    equation: "median_house_value = 45,085.58 + 41,793.85 × median_income"
+    intercept: 45085.58
+    coef: 41793.85
+    interpretation: "Por cada aumento de una unidad en median_income (10,000 dólares de ingreso mediano), el modelo estima un incremento promedio de 41,793.85 dólares en el valor de la vivienda."
+  multiple:
+    metrics:
+      mse: 5059928371.17
+      rmse: 71133.17
+      mae: 51810.48
+      r2: 0.6139
+    intercept: -3578224.23
+    interpretation: "El modelo múltiple explica aproximadamente el 61.39% de la variabilidad del precio en el conjunto de prueba. El error promedio absoluto es de 51,810.48 dólares y el RMSE de 71,133.17 dólares."
+    coefficients:
+      - name: "median_income"
+        value: 40538.40
+        reading: "A mayor ingreso mediano, mayor precio esperado."
+      - name: "longitude"
+        value: -42632.39
+        reading: "El signo refleja el efecto geográfico agregado; no debe interpretarse de forma causal aislada."
+      - name: "latitude"
+        value: -42450.07
+        reading: "El signo refleja el efecto geográfico agregado; no debe interpretarse de forma causal aislada."
+      - name: "housing_median_age"
+        value: 1182.81
+        reading: "Viviendas más antiguas se asocian, en promedio, con un valor ligeramente mayor en este dataset."
+      - name: "total_rooms"
+        value: -8.19
+        reading: "Efecto marginal pequeño y sensible a la escala del bloque."
+      - name: "total_bedrooms"
+        value: 116.26
+        reading: "Efecto marginal positivo después de controlar las demás variables."
+      - name: "population"
+        value: -38.49
+        reading: "Efecto marginal negativo pequeño."
+      - name: "households"
+        value: 46.34
+        reading: "Efecto marginal positivo pequeño."
+  comparison: "El modelo múltiple mejora la capacidad explicativa frente a la regresión simple, pero sigue dejando fuera relaciones no lineales y variables categóricas como ocean_proximity."
+  limitations:
+    - "La regresión lineal supone relaciones lineales que no siempre se cumplen."
+    - "El dataset es agregado por bloque censal y corresponde a 1990; no refleja el mercado actual."
+    - "El valor máximo está censurado en 500,001 dólares."
+    - "No se incluyen variables categóricas ni interacciones."
+    - "Las predicciones son estimaciones académicas, no avalúos profesionales."
+
+simulation:
+  disclaimer: "Esta simulación es una estimación académica basada en un modelo lineal entrenado con datos de 1990. No constituye un avalúo ni una recomendación financiera."
+  inputs:
+    - name: "median_income"
+      label: "Ingreso mediano del bloque (decenas de miles de USD)"
+      min: 0.4999
+      max: 15.0001
+      default: 3.5348
+      step: 0.1
+    - name: "housing_median_age"
+      label: "Edad mediana de las viviendas"
+      min: 1.0
+      max: 52.0
+      default: 29.0
+      step: 1.0
+    - name: "total_rooms"
+      label: "Total de habitaciones del bloque"
+      min: 2.0
+      max: 39320.0
+      default: 2127.0
+      step: 10.0
+    - name: "total_bedrooms"
+      label: "Total de dormitorios del bloque"
+      min: 1.0
+      max: 6445.0
+      default: 435.0
+      step: 1.0
+    - name: "population"
+      label: "Población del bloque"
+      min: 3.0
+      max: 35682.0
+      default: 1166.0
+      step: 10.0
+    - name: "households"
+      label: "Hogares del bloque"
+      min: 1.0
+      max: 6082.0
+      default: 409.0
+      step: 1.0
+
+landing:
+  nav:
+    - label: "Problema"
+      href: "#problema"
+    - label: "Teoría"
+      href: "#teoria"
+    - label: "Datos"
+      href: "#datos"
+    - label: "Pipeline"
+      href: "#pipeline"
+    - label: "EDA"
+      href: "#eda"
+    - label: "Código"
+      href: "#codigo"
+    - label: "Resultados"
+      href: "#resultados"
+    - label: "Simulador"
+      href: "#simulador"
+  code_samples:
+    - title: "1. Importar librerías"
+      description: "Se cargan las herramientas de datos, visualización y modelado."
+      language: "python"
+      code: |
+        import pandas as pd
+        import numpy as np
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        from sklearn.linear_model import LinearRegression
+        from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+        from sklearn.model_selection import train_test_split
+    - title: "2. Cargar y limpiar"
+      description: "Se lee el CSV, se imputan los nulos de total_bedrooms y se excluye la variable categórica."
+      language: "python"
+      code: |
+        df = pd.read_csv("housing.csv")
+        df_clean = df.copy()
+        df_clean["total_bedrooms"] = df_clean["total_bedrooms"].fillna(
+            df_clean["total_bedrooms"].median()
+        )
+        df_clean = df_clean.drop(columns=["ocean_proximity"])
+    - title: "3. Regresión simple"
+      description: "Se estima el precio usando únicamente el ingreso mediano."
+      language: "python"
+      code: |
+        X_simple = df_clean[["median_income"]]
+        y = df_clean["median_house_value"]
+        modelo_simple = LinearRegression().fit(X_simple, y)
+        print(modelo_simple.intercept_, modelo_simple.coef_[0])
+    - title: "4. Regresión múltiple y evaluación"
+      description: "Se entrenan todas las variables numéricas y se evalúa sobre el 20% de prueba."
+      language: "python"
+      code: |
+        features = ["longitude", "latitude", "housing_median_age", "total_rooms",
+                    "total_bedrooms", "population", "households", "median_income"]
+        X = df_clean[features]
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42
+        )
+        modelo = LinearRegression().fit(X_train, y_train)
+        y_pred = modelo.predict(X_test)
+        print("R2:", r2_score(y_test, y_pred))
+
+references:
+  - text: "Pace, R. K., & Barry, R. (1997). Sparse spatial autoregressions. Statistics & Probability Letters, 33(3), 291-297."
+  - text: "Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830."
+  - text: "scikit-learn Developers. California housing dataset. https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset"
+  - text: "Streamlit. Streamlit documentation. https://docs.streamlit.io"
+  - text: "Studer, S. et al. (2021). Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology. Machine Learning and Knowledge Extraction, 3(2), 392-413."
+  - text: "McKinney, W. (2010). Data Structures for Statistical Computing in Python. Proceedings of the 9th Python in Science Conference."
+
+docx:
+  title: "Predicción de Precios de Viviendas con Regresión Lineal"
+  activity: "Actividad de Machine Learning I: del análisis exploratorio al despliegue con Streamlit"
+  group: "Feibert Alirio Guzmán Pérez"
+  discipline: "Ingeniería de Sistemas / Ciencia de Datos e IA"
+  project_name: "Housing Price ML"
+  intro: "El presente proyecto aborda la predicción del valor mediano de una vivienda en California a partir de variables geográficas, demográficas y socioeconómicas. A través de un flujo CRISP-ML(Q), se integran el análisis exploratorio, la limpieza de datos, la regresión lineal simple y múltiple, la evaluación con métricas y el despliegue de una aplicación interactiva en Streamlit. El propósito es demostrar, con un caso real y reproducible, cómo un modelo supervisado puede convertir datos abiertos en una herramienta de consulta comprensible para docentes, estudiantes y analistas."
+  antecedente: "El mercado inmobiliario genera grandes volúmenes de datos, pero su aprovechamiento suele limitarse a reportes descriptivos. La estimación del precio de una vivienda requiere integrar variables de ubicación, tamaño, antigüedad y nivel socioeconómico. Sin un proceso estructurado, los análisis quedan fragmentados y no permiten comparar escenarios ni comunicar resultados con transparencia. Este proyecto propone un flujo completo que va desde la exploración del dataset California Housing hasta un simulador interactivo, con énfasis en la interpretación de métricas y en los límites del modelo."
+  target_text: "Variable objetivo: median_house_value. Es una variable numérica continua que representa el valor mediano de la vivienda en dólares. El modelo busca estimarla a partir de ocho variables numéricas: longitud, latitud, edad mediana, habitaciones, dormitorios, población, hogares e ingreso mediano."
+  features_text: "Variables independientes: longitude, latitude, housing_median_age, total_rooms, total_bedrooms, population, households y median_income. La variable ocean_proximity se excluye del modelo lineal porque es categórica; su inclusión requeriría codificación adicional."
+  question_text: "¿En qué medida un modelo de regresión lineal, entrenado con variables geográficas, demográficas y socioeconómicas, permite estimar el valor mediano de una vivienda y comunicar sus resultados de forma comprensible mediante una aplicación interactiva?"
+  impact_text: "El proyecto impacta a docentes y estudiantes que necesitan un ejemplo completo de Machine Learning, a analistas que desean interpretar el efecto de las variables socioeconómicas y a ciudadanos que requieren una estimación orientativa y transparente. El simulador no sustituye un avalúo profesional; su valor es formativo y exploratorio."
+  model_justification: "Se elige regresión lineal porque la variable objetivo es continua y el objetivo es interpretar coeficientes, no solo maximizar precisión. El modelo simple permite explicar la relación entre ingreso y precio; el modelo múltiple incorpora ubicación, tamaño y estructura del hogar. La comparación entre ambos evidencia el valor de incorporar más información y también los límites de un modelo lineal."
+  architecture_text: "La arquitectura se organiza en capas: datos, preparación, modelado, evaluación, despliegue y documentación. El CSV se carga con pandas; la limpieza y la imputación se realizan antes del EDA; scikit-learn entrena los modelos; las métricas se calculan sobre el conjunto de prueba; Streamlit publica el simulador; y GitHub Pages aloja la landing documental. Esta separación permite reproducir, auditar y mantener cada componente."
+  etl_text: "El proceso ETL se adapta a un dataset único: Extract lee housing.csv; Transform imputa total_bedrooms con la mediana, revisa tipos, elimina ocean_proximity para el modelo y separa variables; Load deja el DataFrame limpio disponible para el EDA, el entrenamiento y la aplicación. Aunque el proyecto no consume APIs, el flujo conserva la lógica de calidad de datos de CRISP-ML(Q)."
+  eda_text: "El EDA muestra que median_income es la variable más correlacionada con el precio. La visualización geográfica evidencia que la costa y las áreas metropolitanas concentran valores más altos. También se identifican valores atípicos en habitaciones, población y hogares, y un efecto techo en 500,001 dólares. Estos hallazgos orientan la selección de variables y la interpretación de los resultados."
+  ethics:
+    - aspect: "Privacidad y protección de datos"
+      approach: "Se utilizan datos públicos agregados por bloque censal. No se incorporan datos personales ni identificadores individuales. Cualquier uso futuro con datos institucionales requeriría anonimización y cumplimiento normativo."
+      applies: "Sí"
+    - aspect: "Sesgo y representatividad"
+      approach: "Se reconoce que el dataset corresponde a California en 1990 y puede no representar otros territorios o periodos. Se documentan las limitaciones y se evita presentar el modelo como predictor universal."
+      applies: "Sí"
+    - aspect: "Transparencia y explicabilidad"
+      approach: "Se publican coeficientes, métricas y limitaciones. La app muestra el resultado y advierte que es una estimación académica. No se oculta el error del modelo."
+      applies: "Sí"
+    - aspect: "Riesgo de estigmatización"
+      approach: "No se clasifican personas ni comunidades como buenas o malas. Las variables geográficas se interpretan como contexto agregado, no como juicio sobre sus habitantes."
+      applies: "Sí"
+    - aspect: "Supervisión humana"
+      approach: "Las predicciones son de apoyo. Cualquier decisión inmobiliaria o financiera debe ser validada por profesionales y por la persona usuaria."
+      applies: "Sí"
+  risks:
+    - "Sobreajuste o interpretación causal incorrecta de los coeficientes."
+    - "Datos desactualizados o no representativos del mercado actual."
+    - "Valores atípicos y efecto techo en la variable objetivo."
+    - "Uso indebido del simulador como avalúo profesional."
+  mitigations:
+    - "División entrenamiento/prueba y reporte de métricas en datos no vistos."
+    - "Documentación explícita de la fuente, fecha y limitaciones del dataset."
+    - "Análisis de valores atípicos y nota sobre el límite de 500,001 dólares."
+    - "Aviso visible en la landing y en la app sobre el carácter académico."
+  pitch:
+    problem: "El precio de la vivienda es difícil de estimar sin herramientas analíticas y los datos disponibles suelen quedarse en reportes descriptivos."
+    solution: "Un flujo CRISP-ML(Q) con regresión lineal simple y múltiple, evaluación transparente y un simulador en Streamlit."
+    data: "20,640 bloques censales de California con ocho variables numéricas y un valor mediano de vivienda."
+    ethics: "Datos públicos agregados, transparencia de métricas, límites explícitos y supervisión humana."
+    impact: "Un recurso formativo reproducible que conecta teoría, código y despliegue para la enseñanza de Machine Learning."
+  bibliography:
+    - "Pace, R. K., & Barry, R. (1997). Sparse spatial autoregressions. Statistics & Probability Letters, 33(3), 291-297."
+    - "Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830."
+    - "scikit-learn Developers. California housing dataset. https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset"
+    - "Streamlit. Streamlit documentation. https://docs.streamlit.io"
+    - "Studer, S. et al. (2021). Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology. Machine Learning and Knowledge Extraction, 3(2), 392-413."
+  annex_datasets:
+    - name: "California Housing (scikit-learn)"
+      description: "Dataset de bloques censales de California, 1990."
+      variables: "8 variables numéricas y valor mediano de vivienda."
+      link: "https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset"
+    - name: "California Housing (StatLib)"
+      description: "Distribución original del dataset utilizada en la literatura."
+      variables: "Variables geográficas, demográficas y socioeconómicas."
+      link: "https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html"
+    - name: "Kaggle: California Housing Prices"
+      description: "Versión tabular del dataset con exploraciones de la comunidad."
+      variables: "Mismas variables del dataset California Housing."
+      link: "https://www.kaggle.com/datasets/camnugent/california-housing-prices"

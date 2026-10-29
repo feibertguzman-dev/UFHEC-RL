@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img">
+<rect width="900" height="520" rx="26" fill="#0B1220"/>
+<g stroke="#FFFFFF" stroke-opacity="0.08">
+  <line x1="80" y1="430" x2="840" y2="430"/><line x1="80" y1="120" x2="840" y2="120"/>
+  <line x1="80" y1="120" x2="80" y2="430"/><line x1="840" y1="120" x2="840" y2="430"/>
+</g>
+<line x1="120" y1="390" x2="780" y2="170" stroke="#22D3EE" stroke-width="4"/>
+<g fill="#F59E0B">
+  <circle cx="150" cy="375" r="5"/><circle cx="230" cy="355" r="4"/><circle cx="310" cy="310" r="5"/>
+  <circle cx="390" cy="325" r="4"/><circle cx="470" cy="275" r="5"/><circle cx="550" cy="255" r="4"/>
+  <circle cx="630" cy="220" r="5"/><circle cx="710" cy="205" r="4"/><circle cx="760" cy="235" r="5"/>
+</g>
+<text x="80" y="72" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="700">La recta que mejor se ajusta</text>
+<text x="80" y="485" fill="#C7D2E5" font-family="Arial, sans-serif" font-size="16">y = β0 + β1x · minimiza la suma de errores al cuadrado</text>
+</svg>

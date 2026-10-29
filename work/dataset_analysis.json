@@ -1,0 +1,229 @@
+{
+  "source": "C:\\Users\\Feibert\\OneDrive\\Documents\\UFHEC\\UFHEC_ML\\Project_RL\\housing.csv",
+  "rows": 20640,
+  "columns": 10,
+  "column_names": [
+    "longitude",
+    "latitude",
+    "housing_median_age",
+    "total_rooms",
+    "total_bedrooms",
+    "population",
+    "households",
+    "median_income",
+    "median_house_value",
+    "ocean_proximity"
+  ],
+  "dtypes": {
+    "longitude": "float64",
+    "latitude": "float64",
+    "housing_median_age": "float64",
+    "total_rooms": "float64",
+    "total_bedrooms": "float64",
+    "population": "float64",
+    "households": "float64",
+    "median_income": "float64",
+    "median_house_value": "float64",
+    "ocean_proximity": "str"
+  },
+  "missing": {
+    "longitude": 0,
+    "latitude": 0,
+    "housing_median_age": 0,
+    "total_rooms": 0,
+    "total_bedrooms": 207,
+    "population": 0,
+    "households": 0,
+    "median_income": 0,
+    "median_house_value": 0,
+    "ocean_proximity": 0
+  },
+  "describe": {
+    "longitude": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": -119.5697044574,
+      "std": 2.0035317235,
+      "min": -124.35,
+      "25%": -121.8,
+      "50%": -118.49,
+      "75%": -118.01,
+      "max": -114.31
+    },
+    "latitude": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 35.6318614341,
+      "std": 2.1359523975,
+      "min": 32.54,
+      "25%": 33.93,
+      "50%": 34.26,
+      "75%": 37.71,
+      "max": 41.95
+    },
+    "housing_median_age": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 28.6394864341,
+      "std": 12.5855576121,
+      "min": 1.0,
+      "25%": 18.0,
+      "50%": 29.0,
+      "75%": 37.0,
+      "max": 52.0
+    },
+    "total_rooms": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 2635.7630813953,
+      "std": 2181.6152515828,
+      "min": 2.0,
+      "25%": 1447.75,
+      "50%": 2127.0,
+      "75%": 3148.0,
+      "max": 39320.0
+    },
+    "total_bedrooms": {
+      "count": 20433.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 537.8705525376,
+      "std": 421.385070074,
+      "min": 1.0,
+      "25%": 296.0,
+      "50%": 435.0,
+      "75%": 647.0,
+      "max": 6445.0
+    },
+    "population": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 1425.476744186,
+      "std": 1132.4621217653,
+      "min": 3.0,
+      "25%": 787.0,
+      "50%": 1166.0,
+      "75%": 1725.0,
+      "max": 35682.0
+    },
+    "households": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 499.5396802326,
+      "std": 382.3297528316,
+      "min": 1.0,
+      "25%": 280.0,
+      "50%": 409.0,
+      "75%": 605.0,
+      "max": 6082.0
+    },
+    "median_income": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 3.8706710029,
+      "std": 1.8998217179,
+      "min": 0.4999,
+      "25%": 2.5634,
+      "50%": 3.5348,
+      "75%": 4.74325,
+      "max": 15.0001
+    },
+    "median_house_value": {
+      "count": 20640.0,
+      "unique": null,
+      "top": null,
+      "freq": null,
+      "mean": 206855.8169089147,
+      "std": 115395.6158744139,
+      "min": 14999.0,
+      "25%": 119600.0,
+      "50%": 179700.0,
+      "75%": 264725.0,
+      "max": 500001.0
+    },
+    "ocean_proximity": {
+      "count": 20640,
+      "unique": 5,
+      "top": "<1H OCEAN",
+      "freq": 9136,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "25%": null,
+      "50%": null,
+      "75%": null,
+      "max": null
+    }
+  },
+  "numeric_ranges": {
+    "longitude": {
+      "min": -124.35,
+      "max": -114.31,
+      "median": -118.49
+    },
+    "latitude": {
+      "min": 32.54,
+      "max": 41.95,
+      "median": 34.26
+    },
+    "housing_median_age": {
+      "min": 1.0,
+      "max": 52.0,
+      "median": 29.0
+    },
+    "total_rooms": {
+      "min": 2.0,
+      "max": 39320.0,
+      "median": 2127.0
+    },
+    "total_bedrooms": {
+      "min": 1.0,
+      "max": 6445.0,
+      "median": 435.0
+    },
+    "population": {
+      "min": 3.0,
+      "max": 35682.0,
+      "median": 1166.0
+    },
+    "households": {
+      "min": 1.0,
+      "max": 6082.0,
+      "median": 409.0
+    },
+    "median_income": {
+      "min": 0.4999,
+      "max": 15.0001,
+      "median": 3.5347999999999997
+    },
+    "median_house_value": {
+      "min": 14999.0,
+      "max": 500001.0,
+      "median": 179700.0
+    }
+  },
+  "categorical_counts": {
+    "ocean_proximity": {
+      "<1H OCEAN": 9136,
+      "INLAND": 6551,
+      "NEAR OCEAN": 2658,
+      "NEAR BAY": 2290,
+      "ISLAND": 5
+    }
+  }
+}

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Si usas este proyecto, cita la siguiente referencia."
+title: Predicción de Precios de Viviendas con Regresión Lineal
+version: 1.0.0
+date-released: 2026-10-28
+authors:
+  - name: Feibert Alirio Guzmán Pérez
+repository-code: https://github.com/TU-USUARIO/TU-REPO
+url: https://TU-USUARIO.github.io/TU-REPO/
+license: MIT
+keywords:
+  - Machine Learning
+  - Regresión Lineal
+  - California Housing
+  - Streamlit
+  - GitHub Pages
+  - CRISP-ML(Q)

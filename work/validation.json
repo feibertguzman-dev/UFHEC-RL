@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "La landing conserva marcadores de GitHub Pages/Streamlit."
+  ],
+  "checked_files": 23
+}
